@@ -1,0 +1,439 @@
+---
+output:
+  pdf_document:
+    number_sections: yes
+    fig_caption: yes
+    toc: true
+    toc_depth: 3
+  word_document: default
+fontsize: 10.5pt
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[R]{Group 1}
+- \usepackage{float}
+bibliography: thebib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70), fig.pos = "!h")
+```
+
+```{r  include=FALSE, message=FALSE}
+# Input Data
+library(tidyverse)
+alldata <- read.csv("~/Desktop/STAT 371/Project/Final Report/counties.csv", header=T) 
+```
+
+\pagebreak
+
+# Introduction 
+
+For the past 5 months, the Covid-19 pandemic has been raging all over the world. Governments have shut down the economy to prevent an even larger spread of the virus. Clearly, this pandemic has impacted everyone’s life to a great extent. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the Covid-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the US has a large number of confirmed cases, we decided to use the dataset that contains the American Covid-19 information (@coviddata) as well as its various demographic information broken down by counties (@countydata). By analyzing the data from a statistical standpoint, we hope to gain some insights into the causes of mortality rate of this pandemic. 
+
+
+# Initial Investigation 
+
+We choose the mortality rate to be our response variable, and we start our investigation by examining the simple plots and correlation coefficients of 6 potential explanatory variables. To satisfy the normality assumption of the mortality rate, we take the natural log of mortality rate of each county as the response variable when computing the statistic models.
+
+
+## Binary Variable: Population Size
+
+```{r pop_mortality, fig.cap= "\\label{fig:pop_mortality}Scatterplot of Mortality Rate vs. Population Size", fig.height = 3.3, fig.width = 5}
+# Binary Variable: Population Size
+par(mar = c(3.8,4,0,1))
+plot(factor(alldata$population), alldata$Mortality_rate, ylim = c(0,1), xlab = "Population", ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+```
+
+We are interested in the relationship between population size and mortality rate. Population size is regarded as a binary explanatory variable here. As the average population size for one county in the United States is around 100,000 (@populationsize). As such, counties are classified into two groups: counties with a population size larger than 100,000 are classified as “Large”, and counties that have a population size smaller than 100,000 are classified as “Small”. In figure \ref{fig:pop_mortality}, although the average mortality rates for both groups seems to lie between 0 and 0.2, there is a difference between mean of two groups and interquartile range. Thus, population size may potentially affect mortality rate.
+
+
+## Categorical Variable: Economic Type
+
+Economy as an important indicator of standard of living, we wonder weather economic types will affect mortality rate. All the counties are classified as one of the six economic types showing from 0 to 5 in the plot. Even though outliers exists in some of the types, mortality rates are around 0.1 for all economic types in figure \ref{fig:Economic_Type}. Thus, different economic types might not have a very significant impact on mortality rate, and it may not be a suitable variable to include in the further discussion.
+
+```{r Economic_Type, fig.cap= "\\label{fig:Economic_Type}Scatterplot of Mortality Rate vs. Economic Types", fig.height = 2.5, fig.width = 5}
+# Categorical Variable: Economic Type
+par(mar = c(4,4,0.4,1))
+plot(Mortality_rate~Economic_typology_2015, data = alldata, ylim = c(0, 1), xlab = "Economic Type", 
+     ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+
+```
+
+## Categorical Variable: Region
+
+```{r Region_mortality, fig.cap= "\\label{fig:Region_mortality}Scatterplot of Mortality Rate vs. Region", fig.height = 2.5, fig.width = 7}
+# Categorical Variable: Region
+par(mar = c(4,4,0,1))
+plot(factor(alldata$Region),alldata$Mortality_rate, ylim = c(0,1), xlab = "Region", ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+```
+
+Another question of interest is whether the geographic location has an impact on mortality rate. Each county is classified into four different regions according to the United States Census Bureau (@region). Figure \ref{fig:Region_mortality} shows that the mortality rates for all regions are between 0 and 0.2. There are more outliers for “Midwest” and “South” compared to “Northeast”. The interquartile range for “Midwest” appears  wider than the other three regions. Moreover, the average mortality rates seem to be different among the four regions. Thus, the geography may affect the mortality rate, and regions could be a variable for further investigation.
+
+## Continuous Variable: Elderly Rate 
+
+```{r OldPopln, fig.cap= "\\label{fig:OldPopln}Scatterplot of Mortality Rate vs. Elderly Rate", fig.height = 2.5, fig.width = 5}
+# Continuous Variable: Elderly Rate 
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~Pop_Above_65, data = alldata, pch=".", type = "p", ylab = "Mortality Rate", xlab = "Elderly Rate", cex = .2, cex.lab=0.7, cex.axis=0.7)
+```
+
+The elderly rate is the percentage of the population over 65 years old in a given county. As shown in figure \ref{fig:OldPopln}, the majority of the counties have elderly rate ranging between 0.1 and 0.23. Within this range, the higher the elderly rate, the wider the mortality rate. This indicates that counties with more older population have more potential to have higher mortality rates. 
+
+```{r Pop_above_65_Mortality_correlation }
+cor(alldata$Pop_Above_65, alldata$Mortality_rate)
+```
+
+The correlation coefficient between elderly rate and mortality rate is 0.06392737, indicating a weak positive correlation between mortality rate and elderly rate. Since the elder group is known to be vulnerable to the virus, and a positive correlation is present, we will then fit a linear regression model to elderly rate and log of mortality rate.
+
+## Continuous Variable: Physician Density
+
+```{r physician_plot, fig.cap= "\\label{fig:physician_plot}Scatterplot of Mortality Rate vs. Physician Density", fig.height = 2.5, fig.width = 7}
+# Continuous Variable: Physician Density
+physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~physician_rate, data =alldata, xlim= c(180,500), ylab = "Mortality Rate", xlab = "Physician Density", cex = .2, cex.lab=0.7, cex.axis=0.7)
+```
+
+The physician density is the number of active physicians per 100,000 population in the given county. Figure \ref{fig:physician_plot} shows a faint pattern that counties with less physicians have a higher mortality rate.
+
+```{r physician & mortality pairwise correlation}
+cc <- cor(physician_rate,alldata$Mortality_rate)
+cc
+```
+
+The correlation value of -0.01268654 indicates a very weak negative linear relationship between physician density and mortality rate. However, we supposed that the mortality rate of Covid-19 depends on a great variety of factors, which very likely includes the number of available healthcare workers. Therefore, we decide to investigate the linear relationship between log of mortality rate and physician density despite the low correlation coefficient.
+
+## Discrete Variable: Number of Specialists
+
+Even though most people that are infected by Covid-19 only have mild symptoms, the virus could still make some people seriously ill and could even be fatal. For those people who become very ill due to the infection of Covid-19, we believe that the number of specialists plays an important role in saving their lives. When a patient’s organs get weak, only a specialist who has unparalleled knowledge and experience in this area can perform the operation. From this perspective, we are interested in whether the number of specialists in a county affects its mortality rate.
+
+```{r specialtiesVSmortality, fig.cap= "\\label{fig:specialtiesVSmortality}Scatterplot of Number of Specialists vs. Mortality rate", fig.height = 2.5, fig.width = 7}
+# Discrete Variable: Number of Specialists
+library(formattable)
+specialist <- alldata$All.Specialties..AAMC.
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~specialist, data =alldata, xlab="Number of Specialists", ylab="Mortality Rate", cex.lab=0.7, cex.axis=0.7, cex.sub=0.7, cex = .2, xlim=c(0,38000))
+```
+ 
+Figure \ref{fig:specialtiesVSmortality} is the scatterplot of mortality rate against the total number of specialists in each county. As the graph shows, a lower number of the specialists in a county, the mortality rate has a large variety from 0 to the highest around 0.9. The plot suggests a potential linear relationship between mortality rate and the number of specialists in a county, which will be further investigated.
+
+## Investigation Conclusion
+
+```{r PairwiseCorrelation, fig.cap= "\\label{fig:PairwiseCorrelation}Scatterplot of Variable of Interests", fig.height = 4, fig.width = 7}
+# Investigation Conclusion
+interest <-cbind(Mortality_Rate = alldata$Mortality, Physician_Rate =physician_rate, Num_Specialist = specialist)
+par(mar = c(1,1,0,0))
+plot <- pairs(interest,cex.lab=0.7, cex.axis=0.7, cex.sub=0.7, cex = .1)
+pairwise <- cor(interest)
+pairwise
+```
+
+After investigating the above six variables, we realized that population size, region, elderly rate, physician density and specialist rate may affect the mortality rate while economic type might not have a very significant impact on mortality rate. Furthermore, thinking from a logical standpoint, physician density and specialist rate seems to be related, even though no obvious trend is observed in figure \ref{fig:PairwiseCorrelation}. Moreover, an existence of positive linear relation between mortality rate and physician density is shown in figure \ref{fig:PairwiseCorrelation} as well. For this suspicious relationship among variables, we will perform several model fittings for a further investigation. 
+
+# Model Fitting 
+
+## Model 1: Log of Mortality Rate vs. Region
+
+```{r}
+# Model 1: Log of Mortality Rate vs. Region
+model_Region <- lm(Mortality~Region, data = alldata)
+summary(model_Region)
+anova(model_Region)
+```
+
+The linear regression model we have is:$y= -3.20073 -0.07649x_0 -0.14826x_1 -0.24041x_2$. In order to check whether the model is significant, we performed a hypothesis test with the log of mortality rate:
+
+Let ${\beta}_{midwest}, {\beta}_{Northeast},{\beta}_{South},{\beta}_{West}$ represent the four different regions.
+
+(1) $H_0$: ${\beta}_{midwest}={\beta}_{Northeast}={\beta}_{South}={\beta}_{West} = 0$ vs. $H_a$: at least one of the ${\beta}\ne 0$.
+
+(2) F-stat =3.132 on 1727 degrees of freedom
+
+(3) p-value = 0.02471 < $\alpha = 0.05$ for the overall p-value
+
+(4) Since the overall p-value is less than $\alpha$, then need to reject $H_0$ at a 5% level of significance. Thus, there is evidence suggesting that different regions have different log of mortality rate.
+
+Moreover, the t-test for most individual regions have p-values that are less than $\alpha = 0.05$, except for “Northeast". However, the adjusted $R^2$ = 0.003684 means that this model only explains 0.37% of variability. The lower percentage of explanation may be because there are plenty of variables that can affect log of mortality rates besides region. Thus, we will conduct a further study on this variable by including additional explanatory variables in the model. We decided to combine the region and population size into one linear model. We first run this model of two explanatory variables without the interaction terms to see if the $R^2$ value improved from the previous model with only region variable (Appendix). After confirming that the two variables collectively explain more variation in log of mortality rate than just one, we formally included the interaction term and examined the multicollearity issue as shown below.
+
+## Model 2: Log of Mortality Rate vs. Region + Population Size + Interaction Term
+
+```{r}
+# Model 2: Log of Mortality Rate vs. Region + Population Size + Interaction Term
+model_Regionpop <- lm(Mortality~factor(Region)+factor(population) +  
+                      factor(population)*factor(Region),  data = alldata)
+summary(model_Regionpop)
+anova(model_Regionpop)
+```
+
+The global F-test is $H_0$: all the parameters are equal to 0 vs. $H_a$: at least one of the parameters is not equal to 0 and the p-value for the global F-statistic is 0.004231 < $\alpha = 0.05$, which is more significant than 0.02471 from the previous model that only contains Region. However, in this model, only one individual variable, region west, is statistically significant. This is clearly a symptom of multicollinearity.
+
+However, the standard error for the four regions is higher than the model that only contains region. Also, the t-test for Northeast is $H_0$: $\beta_{northeast} = 0$ vs. $H_a$: $\beta_{northeast} \ne 0$ and the p-value = 0.96317 > $\alpha = 0.05$, and the t-test for South is $H_0$: $\beta_{south} = 0$ vs. $H_a$: $\beta_{south} \ne 0$, and the p-value = 0.07640 > $\alpha = 0.05$, which do not indicate statistically significance. And the global Fstatistic = 2.972, which is lower than 3.132 from the model that only contains Region. Thus, there may be multicollinearity issues between population and region with interaction terms.
+
+## Model 3: Log of Mortality Rate vs. Elderly Rate
+
+```{r population above 65}
+# Model 3: Log of Mortality Rate vs. Elderly Rate
+ElderlyRate <- alldata$Pop_Above_65
+OldPopn_Model <- lm(Mortality ~ ElderlyRate, data=alldata)
+summary(OldPopn_Model)
+```
+
+Variable "ElderlyRate" represents the percentage of the population above age 65 in each county. The summary above shows that the ANOVA global F test statistic is 24.78 on 1737 degrees of freedom. The p-value = 7.072e-07, far below $\alpha = 0.05$. Therefore, the model as a whole is very significant. 
+
+To check the significance of the individual variable, we will examine the t-test on elderly rate. $H_0$: ${\beta}_{Elderly}$ = 0 vs. $H_a$: ${\beta}_{Elderly}\neq 0$ and the p-value is 7.07e-07 < 0.05. Therefore, we reject the null hypothesis at a 5% level of significance and conclude that the data suggests that elderly rate is a statistically significant predictor of log of mortality rate. Specifically, with one additional unit increase of elderly rate, log of mortality rate increases by 2.40160. In the context of this dataset, since elderly rate is a percentage value, the model indicates that for each one percent increase in elderly rate, log of mortality rate increases by 0.0240160. The adjusted $R^2$ indicates the percentage of population above age 65 is explaining 1.35% of the overall variability in the log of mortality rate.
+
+### Prediction Interval for Old Population
+
+We wanted to extrapolate this model to predict the Covid-19 mortality rate of the US’ close neighbour, Canada. According to the Government of Canada, 15% of the Canadian population is older than 65 (@elderlyrate). The regression equation for the elderly rate model is $y=2.40160x-3.74966$, where x represents the elderly rate of the respective county and y represents the response variable, log of mortality rate. 
+
+For a county with 15% of the population above 65 years old, by substituting x with 0.15 in the equation, we know that the predicted log of mortality rate is -3.389416, which is equivalent to a mortality rate of 3.37%. And below is the 95% of prediction interval. 
+
+```{r Prediction_Interval}
+# Prediction Interval for Old Population
+new <- data.frame(ElderlyRate=0.15)
+prediction <- predict(OldPopn_Model, newdata = new, interval="prediction")
+prediction
+```
+
+The 95% two-sided prediction interval for Canada’s log of mortality rate is [-5.427854, -1.350978]. Converting to the actual mortality rate by taking its exponential, this model suggests a 95% prediction interval of [0.439%, 25.9%], meaning that we are 95% confident that the true but unknown predicted mortality rate of Canada lies between 0.439% and 25.9%.
+
+
+## Model 4: Log of Mortality Rate vs. Number of Specialists
+
+```{r}
+# Model 4: Log of Mortality Rate vs. Number of Specialists
+model_specialities <- lm(Mortality~specialist, data =alldata)
+summary(model_specialities)
+```
+
+We then fit number of specialists and log of mortality into a linear regression model. By conducting the t-test to the "Specialist" this variable, we have $H_0$: $\beta_{specialist} = 0$ vs. $H_a$: $\beta_{specialist} \ne 0$. 
+Since p-value is `r round(summary(model_specialities)$coefficient[2,4], 4)` < 0.05, we reject $H_0$, and this indicates the statistical significance of this variable at 5% level. Furthermore, the adjusted $R^2$ is `r round(summary(model_specialities)$adj.r.squared,4)`, which means the variable of "Specialist" can explain `r percent(round(summary(model_specialities)$adj.r.squared,4))` of the variability of the log of mortality rate. 
+
+
+## Model 5: Log of Mortality Rate vs. Number of Specialists + Physician Density 
+
+The main difference between physicians and specialists is that physicians only provide basic care for a variety of common ailments, whereas specialists offer specialized treatments. One possibility is that physicians who serve as family doctors visit different patients throughout the pandemic, which might cause the spreading of the virus. As such, physician density may also be an important factor for the mortality. To evaluate both impact from a medical resources standpoint, we have constructed a multilinear model that considers both variables - number of specialists and physician density.
+
+```{r}
+# Model 5: Log of Mortality Rate vs. Number of Specialists + Physician Density 
+model_specialists_physician <- lm(Mortality~specialist + physician_rate, data =alldata)
+summary(model_specialists_physician)
+# get the p-value for F-statistic
+lmp <- function (modelobject) {
+    if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+    f <- summary(modelobject)$fstatistic
+    p <- pf(f[1],f[2],f[3],lower.tail=F)
+    attributes(p) <- NULL
+    return(p)
+}
+
+```
+
+As the summary shows, physician density has a positive correlation with the log of mortality rate, which the more physicians there are, the higher the log of mortality. The more physicians there are, the higher the log of mortality. Moreover, the t-test for specialists: $H_0$: $\beta_{specialists} = 0$ vs. $H_a$: $\beta_{specialists} \ne 0$ and the p-value = 0.0131 < $\alpha = 0.05$. And the t-test for physicians: $H_0$: $\beta_{physicians} = 0$ vs. $H_a$: $\beta_{physicians} \ne 0$ with a p-value = 0.0217 < $\alpha = 0.05$. Both p-value are much smaller than 0.05, indicating that these two variables are very statistically significant. Furthermore, the global F-test is $H_0$: $\beta_{specialists} = \beta_{physicians} = 0$ vs. $H_a$: at last one of $\beta_{specialists}$ and $\beta_{physicians} \ne 0$with a p-value = 0.0063 < $\alpha = 0.05$, indicating the model is significant.
+
+Compared with the univariate model containing only $\hat{\beta}_{specialists}$, the model with both $\hat{\beta}_{specialists}$ and $\hat{\beta}_{physicians}$ is more significant since it has a smaller p-value for the global F-test. Also, the adjusted R-square increased from `r round(summary(model_specialities)$adj.r.squared,4)` to `r round(summary(model_specialists_physician)$adj.r.squared,4)`, which is more than doubled. Thus, the model with both $\hat{\beta}_{specialists}$ and $\hat{\beta}_{physicians}$ can explain much more variability of log of mortality rate than the univariate model of specialist.
+
+We now examine the multicollinearity issues by comparing this multivariate model with the previous univariate model. Before adding physicians density, the model has $\hat{\beta}_{specialists}$ = `r round(summary(model_specialities)$coef[2,1],8)`. After the $\hat{\beta}_{physicians}$ is added, the model shows that $\hat{\beta}_{specialists}$ = `r round(summary(model_specialists_physician)$coef[2,1],8)`. There is no obvious change in these two estimates. In addition, the p-values of the independent variables for both models are all smaller than 0.05, indicating the variables are all significant. Moreover, the p-value for the global F-test reduced from 0.02745 to 0.0063, indicating an improvement of model significance. Therefore, there does not seem to be any multicollinearity issues in this model with both specialties and physicians.
+
+```{r checkmutilinear}
+c <- cor(specialist, physician_rate)
+c
+```
+
+In order to confirm no multicollinearity in the model with both specialists and physicians, we compute the correlation between the number of specialists and the number physicians, which is `r c`. Hence, the correlation coefficient does not indicate a strong linear association between these two variables.
+
+### Full Model
+
+```{r package, message=FALSE}
+library(leaps)
+library(tidyverse)
+```
+
+```{r full_model}
+full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region), data=alldata)
+summary(full_model)
+sign_data <- data.frame(ElderlyRate,physician_rate,specialist,alldata$Region, alldata$population)
+f<-regsubsets(alldata$Mortality~., data=sign_data, nbest=2)
+e<-summary(f)
+attach(e)
+cbind(which,cp,adjr2)
+```
+
+
+# Conclusion
+
+From the model fittings, we can conclude that the models of region, percentage of elder population, specialists and physicians all are statistically significant, and thus all affect mortality rate to a certain degree. Specifically, a higher percentage of elder population brings a higher mortality rate. Different geographic regions will have different mortality rates. Another interesting insight we gained from the analysis is that more physicians may lead to a higher mortality rate, whereas a higher number of specialists would help reduce the the mortality rate. Furthermore, adjusted $R^2$ are below 3% for all the model, meaning that they can only explain a small portion of the variability in mortality rate. Hence, in reality, there are more factors that can potentially affect the mortality rate. This suggests that to explain the mortality rate to a fuller extent requires further study.
+
+
+\pagebreak
+
+# Appendix{-}
+
+## Continuous Variable: Unemployment Rate {-}
+
+We thought that the unemployment rate could be a factor that impacts the mortality rate of Covid-19. In the view of economic perspective, higher unemployment rate means that the economy is weak, usually along with a lower standard of living. The government would have less funding, since the major revenue from the government is tax. As such, the social infrastructure such as medical facilities may not be sufficient to serve the whole population. Therefore, it seems to be an indirect factor that may cause a higher mortality rate.
+
+As figure \ref{fig:plot_unemployment} shown, most of the dots are concentrated on the left bottom part, which indicates a lower unemployment rate may have a lower mortality rate, except there are a few outliers on the top left part and the right bottom part. The red line represents the average unemployment rate in US history. Since there are many factors that may influence the spread of Covid-19 and its mortality rate, it may be other factors that cause  the outliers in the graph.
+
+To confirm whether there exists a relationship between mortality rate and unemployment rate, it is also necessary to check the significance. By fitting the unemployment rate and mortality rate into a simple linear regression model we could know how significant the unemployment rate is to the mortality rate. As the summary shows, the p-value for the unemployment rate is 0.0484, which is smaller than 0.05. From a statistical standpoint, the unemployment rate is still considered as significant.
+
+
+```{r plot_unemployment, fig.cap= "\\label{fig:plot_unemployment}Scatterplot of Unemployment rate vs Mortality rate", fig.height = 3, fig.width = 5.5}
+# Continuous Variable: Unemployment Rate
+plot(Mortality_rate~Unemployment_rate_2018, data =alldata, xlab="Unemployment Rate", ylab="Mortality Rate", cex.lab=0.7, cex.axis=0.7, cex.main=0.7, cex.sub=0.7)
+abline(v=5.74, col="red")
+```
+
+To confirm whether there exists a relationship between mortality rate and unemployment rate, it is also necessary to check the significance level. By fitting the unemployment rate and log of mortality rate into the a simple linear regression model with a t-test, we could know how significance the unemployment rate to the mortality rate. 
+
+```{r model_unemployment}
+# Model of Unemployment Rate 
+model_unemployment <- lm(Mortality~Unemployment_rate_2018, data =alldata)
+summary(model_unemployment)
+```
+
+As the summary shows, the p-value for the unemployment rate is `r round(summary(model_unemployment)$coefficient[2,4], 4)`, which is smaller than 0.05. From a statistical standpoint, the unemployment rate is still considered as significance. 
+
+
+## Model of Log of Mortality Rate vs. Physician Density {-}
+
+```{r Physician}
+# Model of Log of Mortality Rate vs. Physician Density 
+Physician_Model <- lm(Mortality ~ physician_rate, data =alldata)
+summary(Physician_Model)
+```
+
+The summary above shows that the ANOVA global F test statistic is 3.985 on 1737 degrees of freedom. The p-value is 0.046, less than alpha= 0.05. Therefore the model is significant. To check the individual parameter, p-value of $\hat{\beta}_{physician}$ is significant at 0.0461. The $\hat{\beta}_{0}$ is also significant as p-value is less than 2e-16. The adjusted $R^2$ indicates that physicians rate is explaining 0.1715% of the overall variability in Mortality. 
+
+In the context of the dataset, this model suggests that as the number of Active Physicians per 100000 Population increases by 1 Physician, the log of mortality rate increases by 0.0009903. This is a counter-intuitive result. One interpretation is that physicians visit different patients throughout the pandemic, which might be a source of spread for the virus.
+
+
+## Model of Log of Mortality Rate vs. Region + Population {-}
+
+```{r}
+# Model of Log of Mortality Rate vs. Region + Population
+model_apop <- lm(Mortality~factor(Region) + factor(population), data = alldata)
+summary(model_apop)
+anova(model_apop)
+```
+
+We want to further investigate the relationship among mortality rate, region, and population size.  The model above has two explanatory variables- Region and Population. The global ANOVA F-test has overall p-value = 0.003139, which is lower than the previous model that only contains the Region variable model1. And the p-values for Region and “Small” or “Large” population are all smaller than $\alpha = 0.05$. The adjusted $R^2$  = 0.006875, which is higher than 0.003684 from the model that only contains region, this means the model that includes the population variable can explain more variability. The global F-statistic = 3.994, which is also higher than 3.132 from the model that only contains region model1. Thus, there may mot be multicollinearity issues between population and region without the interaction term, and we may suggest this is a better model than the model that only contains regions model1.
+
+\pagebreak
+
+# R Code {-}
+
+```{r Rcode, eval=FALSE, tidy=TRUE, echo = TRUE}
+knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70), fig.pos = "!h")
+
+# Input Data
+library(tidyverse)
+alldata <- read.csv("~/Desktop/STAT 371/Project/Final Report/counties.csv", header=T) 
+
+# Binary Variable: Population Size
+par(mar = c(3.8,4,0,1))
+plot(factor(alldata$population), alldata$Mortality_rate, ylim = c(0,1), xlab = "Population", ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+
+# Categorical Variable: Economic Type
+par(mar = c(4,4,0.4,1))
+plot(Mortality_rate~Economic_typology_2015, data = alldata, ylim = c(0, 1), xlab = "Economic Type", 
+     ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+
+
+# Categorical Variable: Region
+par(mar = c(4,4,0,1))
+plot(factor(alldata$Region),alldata$Mortality_rate, ylim = c(0,1), xlab = "Region", ylab = "Mortality Rate", cex.lab=0.7, cex.axis=0.7)
+
+# Continuous Variable: Elderly Rate 
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~Pop_Above_65, data = alldata, pch=".", type = "p", ylab = "Mortality Rate", xlab = "Elderly Rate", cex = .2, cex.lab=0.7, cex.axis=0.7)
+
+cor(alldata$Pop_Above_65, alldata$Mortality_rate)
+
+# Continuous Variable: Physician Density
+physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~physician_rate, data =alldata, xlim= c(180,500), ylab = "Mortality Rate", xlab = "Physician Density", cex = .2, cex.lab=0.7, cex.axis=0.7)
+
+cc <- cor(physician_rate,alldata$Mortality_rate)
+cc
+
+# Discrete Variable: Number of Specialists
+library(formattable)
+specialist <- alldata$All.Specialties..AAMC.
+par(mar = c(4,4,0,1))
+plot(Mortality_rate~specialist, data =alldata, xlab="Number of Specialists", ylab="Mortality Rate", cex.lab=0.7, cex.axis=0.7, cex.sub=0.7, cex = .2, xlim=c(0,38000))
+
+# Investigation Conclusion
+interest <-cbind(Mortality_Rate = alldata$Mortality, Physician_Rate =physician_rate, Num_Specialist = specialist)
+par(mar = c(1,1,0,0))
+plot <- pairs(interest,cex.lab=0.7, cex.axis=0.7, cex.sub=0.7, cex = .1)
+pairwise <- cor(interest)
+pairwise
+
+# Model 1: Log of Mortality Rate vs. Region
+model_Region <- lm(Mortality~Region, data = alldata)
+summary(model_Region)
+anova(model_Region)
+
+# Model 2: Log of Mortality Rate vs. Region + Population Size + Interaction Term
+model_Regionpop <- lm(Mortality~factor(Region)+factor(population) +  
+                      factor(population)*factor(Region),  data = alldata)
+summary(model_Regionpop)
+anova(model_Regionpop)
+
+# Model 3: Log of Mortality Rate vs. Elderly Rate
+ElderlyRate <- alldata$Pop_Above_65
+OldPopn_Model <- lm(Mortality ~ ElderlyRate, data=alldata)
+summary(OldPopn_Model)
+
+# Prediction Interval for Old Population
+new <- data.frame(ElderlyRate=0.15)
+prediction <- predict(OldPopn_Model, newdata = new, interval="prediction")
+prediction
+
+# Model 4: Log of Mortality Rate vs. Number of Specialists
+model_specialities <- lm(Mortality~specialist, data =alldata)
+summary(model_specialities)
+
+# Model 5: Log of Mortality Rate vs. Number of Specialists + Physician Density 
+model_specialists_physician <- lm(Mortality~specialist + physician_rate, data =alldata)
+summary(model_specialists_physician)
+# get the p-value for F-statistic
+lmp <- function (modelobject) {
+    if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+    f <- summary(modelobject)$fstatistic
+    p <- pf(f[1],f[2],f[3],lower.tail=F)
+    attributes(p) <- NULL
+    return(p)
+}
+
+
+c <- cor(specialist, physician_rate)
+c
+
+# Continuous Variable: Unemployment Rate
+plot(Mortality_rate~Unemployment_rate_2018, data =alldata, xlab="Unemployment Rate", ylab="Mortality Rate", cex.lab=0.7, cex.axis=0.7, cex.main=0.7, cex.sub=0.7)
+abline(v=5.74, col="red")
+
+# Model of Unemployment Rate 
+model_unemployment <- lm(Mortality~Unemployment_rate_2018, data =alldata)
+summary(model_unemployment)
+
+# Model of Log of Mortality Rate vs. Physician Density 
+Physician_Model <- lm(Mortality ~ physician_rate, data =alldata)
+summary(Physician_Model)
+
+# Model of Log of Mortality Rate vs. Region + Population
+model_apop <- lm(Mortality~factor(Region) + factor(population), data = alldata)
+summary(model_apop)
+anova(model_apop)
+
+```
+
+\pagebreak
+
+# Reference {-}
+
+
