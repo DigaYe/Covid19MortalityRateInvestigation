@@ -22,7 +22,8 @@ knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70)
 ```{r  include=FALSE, message=FALSE}
 # Input Data
 library(tidyverse)
-alldata <- read.csv("~/Desktop/STAT 371/Project/Final Report/counties.csv", header=T) 
+library("here")
+alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 ```
 
 \pagebreak
