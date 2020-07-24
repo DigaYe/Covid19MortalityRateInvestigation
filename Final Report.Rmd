@@ -48,7 +48,7 @@ full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region), 
 summary(full_model)
 ```
 
-# Assumption Checking (4)
+# Assumption Checking (Diga)
 
 # Results
 
