@@ -1,0 +1,69 @@
+---
+output:
+  pdf_document:
+    number_sections: yes
+    fig_caption: yes
+    toc: true
+    toc_depth: 3
+  word_document: default
+fontsize: 10.5pt
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[R]{Group 1}
+- \usepackage{float}
+bibliography: thebib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70), fig.pos = "!h")
+```
+
+```{r  include=FALSE, message=FALSE}
+# Input Data and library
+library(tidyverse)
+library("here")
+library(formattable)
+library(leaps)
+alldata <- read.csv(here::here("data","counties.csv"), header=T) 
+physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
+specialist <- alldata$All.Specialties..AAMC.
+ElderlyRate <- alldata$Pop_Above_65
+```
+
+\pagebreak
+
+# Abstract
+
+# Introduction
+
+# Dataset Description 
+
+# investigation: single model fitting -> significant 
+
+# Model selection
+
+```{r full_model}
+full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region), data=alldata)
+summary(full_model)
+```
+
+# Assumption Checking (4)
+
+# Results
+
+# Limitation of Study 
+
+# Conclusion 
+
+\pagebreak
+
+# Appendix{-}
+
+# Reference {-}
+
+\pagebreak
+
+# R Code {-}
+
+
