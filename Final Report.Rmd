@@ -41,7 +41,7 @@ ElderlyRate <- alldata$Pop_Above_65
 
 # investigation: single model fitting -> significant 
 
-# Model selection
+# Model Selection 
 
 ```{r full_model}
 full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region), data=alldata)
