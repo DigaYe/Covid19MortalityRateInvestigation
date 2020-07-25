@@ -26,9 +26,14 @@ library("here")
 library(formattable)
 library(leaps)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
-physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
-specialist <- alldata$All.Specialties..AAMC.
+attach(alldata)
+Physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
+Specialist <- alldata$All.Specialties..AAMC.
 ElderlyRate <- alldata$Pop_Above_65
+Poverty <- POVALL_2018
+Migration <- INTERNATIONAL_MIG_2018
+Nurse <- Total.nurse.practitioners..2019.
+Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 ```
 
 \pagebreak
@@ -43,9 +48,11 @@ ElderlyRate <- alldata$Pop_Above_65
 
 # Model Selection 
 
-```{r full_model}
-full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region), data=alldata)
-summary(full_model)
+```{r}
+f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=7)
+e <- summary(f)
+attach(e)
+cbind(which,cp,adjr2)
 ```
 
 # Assumption Checking (Diga)
