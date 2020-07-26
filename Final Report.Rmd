@@ -19,6 +19,16 @@ bibliography: thebib.bib
 knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70), fig.pos = "!h")
 ```
 
+\pagebreak
+
+# Abstract
+
+# Introduction
+
+For the past 5 months, the coronavirus (Covid-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the Covid-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the US has a large number of confirmed cases, we would analyze the Covid-19 cases from US from a statistical standpoint in the below report. By fitting and comparing different models, we hope to gain some insights into the causes of mortality rate of this pandemic. 
+
+# Dataset Description 
+
 ```{r  include=FALSE, message=FALSE}
 # Input Data and library
 library(tidyverse)
@@ -27,22 +37,17 @@ library(formattable)
 library(leaps)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 attach(alldata)
-Physician_rate <- alldata$Active.Physicians.per.100000.Population.2018..AAMC.
-Specialist <- alldata$All.Specialties..AAMC.
-ElderlyRate <- alldata$Pop_Above_65
+Physician_rate <- Active.Physicians.per.100000.Population.2018..AAMC.
+Specialist <- All.Specialties..AAMC.
+ElderlyRate <- Pop_Above_65
 Poverty <- POVALL_2018
 Migration <- INTERNATIONAL_MIG_2018
 Nurse <- Total.nurse.practitioners..2019.
 Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 ```
 
-\pagebreak
 
-# Abstract
-
-# Introduction
-
-# Dataset Description (Diga - you made some changes! -> save -> committee -> push)
+The first dataset we found was the US Covid-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we have used contains socioeconomic, demographic, health care, education and transit data for each county in the 50 states in US. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code uniquely identifying each area. Thus, by joining these two data sets together with Excel, we obtained our combined data called alldata.
 
 # investigation: single model fitting -> significant 
 
@@ -55,7 +60,36 @@ attach(e)
 cbind(which,cp,adjr2)
 ```
 
-# Assumption Checking (Diga)
+# Assumption Checking 
+
+```{r full_model, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
+full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region))
+summary(full_model)
+par(mfrow = c(2, 2))
+plot(full_model,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
+```
+
+## Mean of 0: 
+
+Looking at the plot of Residuals vs. Fitted values the residuals do appear randomly scatter around the value 0. As such, it appears to satisfy the assumption of mean of 0.
+
+## Independence: 
+
+Again the plot of Residuals vs. Fitted values shows the residuals randomly scattered with no apparent trend and thus satisfied.
+
+## Constant Variance: 
+
+The Scale location plot suggests that the majority of residuals are randomly scattered evenly within an upper and lower band around the value 0, which indicates a constant variance. However, since there is a few larger residuals (such as observation 31, 90 and 98) on the top, the red line bulges in the middle of the majority data point, causing a slightly increase and decrease in variability. Thus, it is considered fairly satisfied.
+
+## Normality: 
+
+The Q-Q plot overall appears good, since most of the residuals are lying on a straight line. However, the normality assumption can only be considered as fairly satisfied, since there are some point at the tails are off the line, suggesting some potential outliers. 
+
+## Outliers:
+
+It could be seen that there are some potential outliers, as we could find that there are some points off the straight at the tails in Q-Q plot, which appears to be outliers. 
+
+In terms of the leverage and Standard Residual plot, it could seen that there is a point on the very right side and a few other points slightly upper and lower compared to the rest of majority of observations. As such, those points are considered to have a high leverage, whereas they are all within the Cook's Distance. Thus, these points are considered not to be influential. 
 
 # Results
 
