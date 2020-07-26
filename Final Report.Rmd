@@ -47,13 +47,38 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 # investigation: single model fitting -> significant 
 
 # Model Selection 
-
+In order to find the best fitting model, we performed a automic model selection process by fitting all possible combinations.
 ```{r}
-f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=7)
+f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
 e <- summary(f)
 attach(e)
 cbind(which,cp,adjr2)
 ```
+
+From the result, we noticed that models containing  at least five variables have a fair cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
+```{r}
+model1 <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region))
+model2 <- lm(Mortality~ElderlyRate + Nurse + Migration + factor(Region))
+model3 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region))
+model4 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + factor(Region))
+model5 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region) + factor(population))
+model6 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  factor(Region))
+model7 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region))
+model8 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
+model9 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
+model10 <- lm(Mortality~ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
+model11 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + factor(Region) + factor(population))
+model12 <- lm(Mortality~ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + factor(Region) + factor(population))
+
+A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12, k=2)
+
+B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
+
+output_table <- data.frame(A, B) 
+knitr::kable(output_table)
+```
+
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values.
 
 # Assumption Checking (Diga)
 
