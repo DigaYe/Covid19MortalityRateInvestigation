@@ -84,7 +84,46 @@ output_table <- data.frame(A, B)
 knitr::kable(output_table)
 ```
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values.
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
+
+Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
+
+```{r}
+summary(model3)
+```
+
+According to the result, the p-value for Unemployment_rate_2018 = 0.07634 > $\alpha = 0.05$ which means Unemployment_rate_2018 is not statistically significant. Then, we omit the variable Unemployment_rate_2018 from the model.
+
+```{r}
+summary(model1)
+```
+
+Step 2: Repeat the procedure in step 1 with a simplified model excluding the Unemployment_rate_2018, which is the our model1. The p-value for ElderlyRate = 4.33e-07 < $\alpha = 0.05$,the p-value for Specialist = 0.02241 < $\alpha = 0.05$, p-value for Migration = 0.00516 < $\alpha = 0.05$, and the p-values for most categories under Region are under $\alpha = 0.05$. This suggests that all variables inside this model are statistically significant. Thus we cannot further simplify this model and this model would be one of our best models to consider.
+
+Next, to compare model2 and model4, we use the extra sum of squares principle since model2 is nested within model4. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
+
+```{r}
+summary(model2)
+summary(model4)
+```
+
+Hypothesis test:
+
+(1) $H_0$: $\beta_{unemployment} = 0$ vs. $H_a$: $\beta_{unemployment} \ne 0$
+
+(2) $f_0 = \frac{(1.035 - 1.034)/(1724-1723)}{1.034/1723} = 1.66634$
+
+```{r}
+(pval4 <- pf(1.66634,1, 1723, lower.tail = FALSE))
+```
+
+(3) p-value = $P(F_{1,1723} > 1.66634) = 0.197$ 
+
+(4) Since p-value > $\alpha = 0.05$, then we do not reject $H_0$ at a 5% level of significance, which suggests the addition variable Unemployment_rate_2018 is not useful.
+
+Thus we choose model2 as one of our best models to consider.
+
+Lastly, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Therefore, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as our final model.
 
 # Assumption Checking (Diga)
 =======
