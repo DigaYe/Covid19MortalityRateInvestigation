@@ -36,6 +36,9 @@ library("here")
 library(formattable)
 library(leaps)
 library(car)
+library(MPV)
+library(leaps)
+library(MASS)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 attach(alldata)
 Physician_rate <- Active.Physicians.per.100000.Population.2018..AAMC.
@@ -82,7 +85,7 @@ x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, P
 cor_matrix <- cor(x)
 round(cor_matrix,3)
 
-fullmodel<-lm(Mortality ~ ElderlyRate + factor(Region) + Specialist + population + Physician_rate + Unemployment_rate_2018 + Poverty + Migration + Nurse)
+fullmodel<-lm(Mortality ~ ElderlyRate + factor(Region) + Specialist + factor(population) + Physician_rate + Unemployment_rate_2018 + Poverty + Migration + Nurse)
 
 vif(fullmodel)
 ```
@@ -111,6 +114,7 @@ model3 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_
 model4 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + factor(Region))
 model5 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region) + factor(population))
 model6 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  factor(Region))
+summary(model6)
 model7 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region))
 model8 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
 model9 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
@@ -175,6 +179,13 @@ summary(model_int)
 ```
 
 The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 which is lower than 0.0218 from model1, which means the model that includes the interaction term explains less variability. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Besides, the global F-statistic = 6.463 which is lower than 7.425 from model1. Thus, there may be some multicollinearity issue between Specialist and Migration with interaction term.
+
+```{r}
+step.model <- stepAIC(fullmodel, direction = "both", 
+                      trace = FALSE)
+summary(step.model)
+step.model$anova
+```
 
 Therefore, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model.
 
