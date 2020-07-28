@@ -51,7 +51,8 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 The first dataset we found was the US Covid-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we have used contains socioeconomic, demographic, health care, education and transit data for each county in the 50 states in US. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code uniquely identifying each area. Thus, by joining these two data sets together with Excel, we obtained our combined data called alldata.
 
 # investigation: single model fitting -> significant 
-In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unwmploymenr_rate_2018. Due to the low R^2 value in the models, we decided to include 3 more explanatory variables to investigate, which are Poverty, Migration, and Nurse. The 9 individual summaries are listed below.
+
+In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in the models, we decided to include 3 more explanatory variables to investigate, which are Poverty, Migration, and Nurse. The 9 individual summaries are listed below.
 
 ```{r}
 modela <- lm(Mortality~ ElderlyRate)
@@ -75,7 +76,7 @@ summary(modelh)
 summary(modeli)
 ```
 
-As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly we will observe the correlation matrix and VIF of those variables to spot red flags for multicolinearity.
+As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicolinearity.
 
 ```{r Covariance & VIF , echo=FALSE}
 x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
@@ -86,24 +87,35 @@ fullmodel<-lm(Mortality ~ ElderlyRate + factor(Region) + Specialist + population
 
 vif(fullmodel)
 ```
+
 Observe the correlation matrix. Using 0.8 as a cutoff, we see signs of multicolinearity issues in the following pairs of variables: Specialist & Poverty, Specialist & Migration, Specialist & Nurse, Poverty & Migration, Poverty & Nurse, Migration & Nurse. 
 
 Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicolinearity issues in Specialist, Poverty, Migration, and Nurse. 
 
 
-
-
 # Model Selection 
-In order to find the best fitting model, we performed a automic model selection process by fitting all possible combinations.
+
+In order to find the best fitting model, we performed a automatic model selection process by fitting all possible combinations.
+
 ```{r}
 f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
 e <- summary(f)
 attach(e)
 cbind(which,cp,adjr2)
 ```
+```{r DigaCpPlot}
+library(leaps)
+library(tidyverse)
+Covid19 %>% dplyr::select(-Mortality,-Region,-population) -> x 
+b<-leaps(x=x, y=Covid19$Mortality, names=names(x))
+plot(b$size, b$Cp) 
+lines(b$size, b$size)
 
-<<<<<<< HEAD
-From the result, we noticed that models containing  at least five variables have a fair cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
+```
+
+
+From the result, we noticed that models containing  at least five variables have a fair Cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
+
 ```{r}
 model1 <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region))
 model2 <- lm(Mortality~ElderlyRate + Nurse + Migration + factor(Region))
@@ -178,15 +190,20 @@ The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the mode
 
 Therefore, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model.
 
-# Assumption Checking (Diga)
-=======
 # Assumption Checking 
 
-```{r full_model, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
-full_model <- lm(Mortality ~ ElderlyRate + factor(population) + factor(Region))
-summary(full_model)
+```{r model1, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
+summary(model1)
 par(mfrow = c(2, 2))
-plot(full_model,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
+plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
+```
+
+```{r diagnosticplots}
+model_standardisedres <- rstandard(full_model)
+#par(mfrow=c(2,2))
+#plot(model_standardisedres~ ElderlyRate)
+#plot(model_standardisedres~ factor(population))
+#plot(model_standardisedres~ factor(Region))
 ```
 
 ## Mean of 0: 
@@ -210,11 +227,12 @@ The Q-Q plot overall appears good, since most of the residuals are lying on a st
 It could be seen that there are some potential outliers, as we could find that there are some points off the straight at the tails in Q-Q plot, which appears to be outliers. 
 
 In terms of the leverage and Standard Residual plot, it could seen that there is a point on the very right side and a few other points slightly upper and lower compared to the rest of majority of observations. As such, those points are considered to have a high leverage, whereas they are all within the Cook's Distance. Thus, these points are considered not to be influential. 
->>>>>>> dd3cf0ad8f0b3922af85115f104e0b2c58e5cdbd
 
 # Results
 
 # Limitation of Study 
+
+It could be seen there are some mutilconlity in the model ....
 
 # Conclusion 
 
