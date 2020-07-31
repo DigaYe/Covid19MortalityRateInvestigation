@@ -97,6 +97,7 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 
 
 # Model Selection 
+## Automatic model selection method
 To start our model selection process, we used the stepwise selection method first given the full model as the initial model to find the best model based on algorithm.
 ```{r}
 step.model <- stepAIC(fullmodel, direction = "both", 
@@ -106,8 +107,9 @@ step.model$anova
 ```
 
 The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + Specialist + Physician_rate + Unemployment_rate_2018 + Migration) as the final model. However, we noticed the p-value for Physician_rate = 0.13894 > $\alpha = 0.05$ and the p-value for Unemployment_rate_2018 = 0.09422 > $\alpha = 0.05$, which do not indicate statistical significance. Thus, the model is not the most suitable model for our dataset.
-    
-In order to find the best fitting model, we performed a automatic model selection process by fitting all possible combinations.
+ 
+## Model selection process   
+In order to find the best fitting model, we performed another model selection process by fitting all possible combinations.
 
 ```{r}
 f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
@@ -190,9 +192,7 @@ Hypothesis test:
 
 Thus we choose model2 as one of our best models to consider.
 
-Then, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on.
-
-We notice from previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Then we want to investigate on the collinearity of these two variables.
+Then, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity of these two variables.
 
 ```{r}
 model_int <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region) + Specialist * Migration)
@@ -201,6 +201,8 @@ anova(model_int)
 ```
 
 The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 which is lower than 0.0218 from model1, which means the model that includes the interaction term explains less variability. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Besides, the global F-statistic = 6.463 which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to stay with model1. 
+
+We notice from previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value more than 50, and Migration has a VIF value of 5 indicating mutlicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model, and will need to investiage on this using a larger dataset.
 
 Based on the method we used and models we discussed, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model for the given covid-19 dataset.
 
@@ -244,6 +246,7 @@ It could be seen that there are some potential outliers, as we could find that t
 In terms of the leverage and Standard Residual plot, it could seen that there is a point on the very right side and a few other points slightly upper and lower compared to the rest of majority of observations. As such, those points are considered to have a high leverage, whereas they are all within the Cook's Distance. Thus, these points are considered not to be influential. 
 
 # Results
+We found that Elderly rate, number of Specialists, number of international migrations, and region are four variables that have major impacts to Covid-19 mortality rate given the dataset. This result matches with our initial speculation. Based on above disscussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Further, the best linear model fitting for these variables is $Mortality = -3.700e+00 + (2.699e+00)x_{ElderlyRate} + (3.641e-05)x_{Specialist} - (2.297e-05 )x_{Migration} - (8.959e-02)x_{Northeast} - (1.422e-01)x{South} - (2.641e-01)x_{West}$. However, as Migration and Specialist are highly correlated, and both of them have high VIF, there can be potential multicollineary issues and a larger dataset should be utilized to further discuss this. 
 
 # Limitation of Study 
 
