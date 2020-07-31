@@ -97,7 +97,16 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 
 
 # Model Selection 
+To start our model selection process, we used the stepwise selection method first given the full model as the initial model to find the best model based on algorithm.
+```{r}
+step.model <- stepAIC(fullmodel, direction = "both", 
+                      trace = FALSE)
+summary(step.model)
+step.model$anova
+```
 
+The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + Specialist + Physician_rate + Unemployment_rate_2018 + Migration) as the final model. However, we noticed the p-value for Physician_rate = 0.13894 > $\alpha = 0.05$ and the p-value for Unemployment_rate_2018 = 0.09422 > $\alpha = 0.05$, which do not indicate statistical significance. Thus, the model is not the most suitable model for our dataset.
+    
 In order to find the best fitting model, we performed a automatic model selection process by fitting all possible combinations.
 
 ```{r}
@@ -188,18 +197,13 @@ We notice from previous analysis that Specialist and Migration have a correlatio
 ```{r}
 model_int <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region) + Specialist * Migration)
 summary(model_int)
+anova(model_int)
 ```
 
-The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 which is lower than 0.0218 from model1, which means the model that includes the interaction term explains less variability. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Besides, the global F-statistic = 6.463 which is lower than 7.425 from model1. Thus, there may be some multicollinearity issue between Specialist and Migration with interaction term.
+The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 which is lower than 0.0218 from model1, which means the model that includes the interaction term explains less variability. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Besides, the global F-statistic = 6.463 which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to stay with model1. 
 
-```{r}
-step.model <- stepAIC(fullmodel, direction = "both", 
-                      trace = FALSE)
-summary(step.model)
-step.model$anova
-```
+Based on the method we used and models we discussed, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model for the given covid-19 dataset.
 
-Therefore, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model.
 
 # Assumption Checking 
 
