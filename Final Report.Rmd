@@ -69,7 +69,7 @@ In the previous report, we have identified 6 individually significant explanator
 
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
-```{r include = False}
+```{r}
 d1 <- data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
 d1 %>% rename('P-value' = p_value)
 kable(d1,align = "l")
