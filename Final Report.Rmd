@@ -61,8 +61,7 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 
 The first dataset we found was the US COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we have used contains socioeconomic, demographic, health care, education and transit data for each county in the 50 states in US. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code uniquely identifying each area. Thus, by joining these two data sets together in Excel, we obtained our master data. 
 
-Furthermore, we are interested in the mortality rate and has chosen it to be our response variable. To satisfy the normality
-assumption, we created a column called Mortality, which from taking the natural log of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
+Furthermore, we are interested in the mortality rate and has chosen it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which from taking the natural log of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
 
 # Investigation
 
@@ -71,10 +70,10 @@ In the previous report, we have identified 6 individually significant explanator
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
 ```{r}
-d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), Pvalue = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
-kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables")%>%
+d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
+kable(d1,align = "l",booktabs = T, caption = "Figure 1: P-values for Selected Explanatory Variables")%>%
   kable_styling(position = "center", full_width = FALSE)%>%
-  column_spec(1, width = "19em")
+  column_spec(1, width = "20em")
 ```
 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity.
@@ -98,7 +97,8 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 ## Automatic model selection method
 To start our model selection process, we used the stepwise selection method first given the full model as the initial model to find the best model based on algorithm.
 ```{r}
-step.model <- stepAIC(fullmodel, direction = "both",  trace = FALSE)
+step.model <- stepAIC(fullmodel, direction = "both", 
+                      trace = FALSE)
 summary(step.model)
 step.model$anova
 ```
