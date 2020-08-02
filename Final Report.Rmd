@@ -70,7 +70,7 @@ The p-value of the global F-tests for the corresponding 9 single-model fittings 
 
 ```{r}
 d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
-kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables")%>%
+kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables",linesep = "")%>%
   kable_styling(position = "center", full_width = FALSE)%>%
   column_spec(1, width = "20em")
 ```
