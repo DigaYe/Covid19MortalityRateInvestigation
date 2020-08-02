@@ -62,7 +62,7 @@ The first dataset we found was the US COVID-19 data, which recorded the mortalit
 
 # Investigation
 
-In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affects the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose single models were tested signigicant at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, makng a total of 9 variables selected.
+In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affects the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose single models were tested significant at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
 
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
@@ -73,7 +73,7 @@ kable(d1,align = "l")
 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity
 
-```{r include=FALSE}
+```{r}
 x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 cor_matrix <- cor(x)
 round(cor_matrix,3)
