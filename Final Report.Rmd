@@ -70,9 +70,11 @@ In the previous report, we have identified 6 individually significant explanator
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
 ```{r}
-d1 <- data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
-d1 %>% rename('P-value' = p_value)
-kable(d1,align = "l")
+d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), Pvalue = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
+kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "19em")
+
 ```
 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity.
@@ -132,7 +134,6 @@ model3 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_
 model4 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + factor(Region))
 model5 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region) + factor(population))
 model6 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  factor(Region))
-summary(model6)
 model7 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region))
 model8 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
 model9 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + factor(Region) + factor(population))
@@ -143,6 +144,9 @@ model12 <- lm(Mortality~ElderlyRate + Specialist + Nurse + Migration + Unemploym
 A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12, k=2)
 
 B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
+
+d2=data.frame(Model= c("model1", "model2", "model3", "model4", "model5", "model6","model7", "model8","model9","model10","model11","model12"), Explanatory_Variable = c("x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{Region}","ElderlyRate + Nurse + Migration + Region", "ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population","ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population"))
+kable(d2,align = "l")
 
 output_table <- data.frame(A, B) 
 knitr::kable(output_table)
