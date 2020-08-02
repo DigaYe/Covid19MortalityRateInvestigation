@@ -46,7 +46,6 @@ library(leaps)
 library(MASS)
 library(knitr)
 library(kableExtra)
-library(equatiomatic)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 attach(alldata)
 Physician_rate <- Active.Physicians.per.100000.Population.2018..AAMC.
@@ -115,13 +114,10 @@ attach(e)
 cbind(which,cp,adjr2)
 ```
 ```{r DigaCpPlot}
-library(leaps)
-library(tidyverse)
 Covid19 %>% dplyr::select(-Mortality,-Region,-population) -> x 
 b<-leaps(x=x, y=Covid19$Mortality, names=names(x))
 plot(b$size, b$Cp) 
-lines(b$size, b$size)
-
+lines(b$size, b$size, col="red")
 ```
 
 
@@ -150,10 +146,20 @@ kable(d2,align = "l")
 
 output_table <- data.frame(A, B[2]) 
 knitr::kable(output_table)
+
 ```
 
-Model1: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region \
-Model2: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region \
+
+
+Model1: \
+Log of Mortality Rate ~ ElderlyRate + Specialist + Migration + Region \
+Model2: \
+Log of Mortality Rate ~ ElderlyRate + Nurse + Migration + Region \
+Model8: \
+Log of Mortality Rate ~ ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population
+- Model9: \
+Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
+
 Model3: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region \
 Model4: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region \
 Model5: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population \
@@ -228,7 +234,6 @@ Based on the method we used and models we discussed, we select model1: Mortality
 # Assumption Checking 
 
 ```{r model1, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
-summary(model1)
 par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
