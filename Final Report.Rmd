@@ -142,12 +142,31 @@ A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,
 
 B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
 
-d2=data.frame(Model= c("model1", "model2", "model3", "model4", "model5", "model6","model7", "model8","model9","model10","model11","model12"), Explanatory_Variable = c("x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{Region}","ElderlyRate + Nurse + Migration + Region", "ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population","ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population"))
+d2=data.frame(Model= c(1, 2, 3, 4, 5, 6,7, 8,9,10,11,12), Regression_Equation = c("$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{Region}$", "$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{Physician_rate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Physician_rate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Poverty} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Poverty} + x_{Region} + x_{population}$"))
 kable(d2,align = "l")
 
-output_table <- data.frame(A, B) 
+output_table <- data.frame(A, B[2]) 
 knitr::kable(output_table)
 ```
+
+Model1: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region \
+Model2: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region \
+Model3: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region \
+Model4: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region \
+Model5: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population \
+Model6: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  Region \
+Model7: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region \
+Model8: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
+\
+Model9: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
+\
+Model10: Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
+\
+Model11: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population \
+\
+Model12: Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population \
+\
+
 
 By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
 
