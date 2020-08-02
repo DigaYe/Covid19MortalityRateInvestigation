@@ -46,6 +46,7 @@ library(leaps)
 library(MASS)
 library(knitr)
 library(kableExtra)
+library(equatiomatic)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 attach(alldata)
 Physician_rate <- Active.Physicians.per.100000.Population.2018..AAMC.
