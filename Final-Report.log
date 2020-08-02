@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -589,20 +589,66 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-77.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+10.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] [4] [5]
-<Final-Report_files/figure-latex/DigaCpPlot-1.pdf, id=137, 469.755pt x 325.215p
+) [3pdfTeX warning (ext4): destination with the same identifier (name{table.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.240 \end{verbatim}
+                    ] [4] [5]
+<Final-Report_files/figure-latex/DigaCpPlot-1.pdf, id=138, 469.755pt x 325.215p
 t>
 File: Final-Report_files/figure-latex/DigaCpPlot-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/DigaCpPlot-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/DigaCpPlot-1.pdf  used
- on input line 405.
+ on input line 396.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[6] [7 <./Final-Report_files/figure-latex/DigaCpPlot-1.pdf>]
-Underfull \hbox (badness 1158) in paragraph at lines 476--479
+[6]
+Overfull \hbox (440.23395pt too wide) in paragraph at lines 402--431
+[][] 
+ []
+
+[7 <./Final-Report_files/figure-latex/DigaCpPlot-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 462--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--503
+
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 509--512
 []\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
 e-cial-ist + Mi-gra-tion + Un-em-ploy-
  []
@@ -612,32 +658,32 @@ e-cial-ist + Mi-gra-tion + Un-em-ploy-
 File: Final-Report_files/figure-latex/model1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/model1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/model1-1.pdf  used on 
-input line 745.
+input line 750.
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
 [12] [13pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.785 \subsection{Outliers:}\label{outliers}}
-                                              <./Final-Report_files/figure-late
-x/model1-1.pdf>] [14] [15] [16] [17] [18] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1080.
-[20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1080.
+l.781 \subsection{Normality:}\label{normality}}
+                                                <./Final-Report_files/figure-la
+tex/model1-1.pdf>] [14] [15] [16] [17] [18] [19] [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1085.
+[21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1085.
 (./Final-Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1080.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1080.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1085.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1085.
 
 Package rerunfilecheck Info: File `Final-Report.out' has not changed.
 (rerunfilecheck)             Checksum: 8981966D5966D9DBC299617C3A3D41E4;2270.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1080.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1085.
  ) 
 Here is how much of TeX's memory you used:
- 12143 strings out of 482854
- 172161 string characters out of 5956102
- 443457 words of memory out of 5000000
- 27180 multiletter control sequences out of 15000+600000
+ 12147 strings out of 482854
+ 172210 string characters out of 5956102
+ 445521 words of memory out of 5000000
+ 27182 multiletter control sequences out of 15000+600000
  568772 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,12n,45p,278b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -654,10 +700,10 @@ lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
 fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
 sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
 ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (20 pages, 649755 bytes).
+Output written on Final-Report.pdf (21 pages, 650273 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
