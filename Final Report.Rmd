@@ -124,7 +124,6 @@ From the result, we noticed that models containing  at least five variables have
 
 ```{r}
 model1 <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region))
-equatiomatic::extract_eq(fit, use_coefs = TRUE)
 model2 <- lm(Mortality~ElderlyRate + Nurse + Migration + factor(Region))
 model3 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region))
 model4 <- lm(Mortality~ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + factor(Region))
