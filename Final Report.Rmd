@@ -6,7 +6,7 @@ output:
     toc: true
     toc_depth: 2
   word_document: default
-fontsize: 12pt
+  fontsize: 12pt
 header-includes:
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
@@ -59,17 +59,17 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 ```
 
 
-The first dataset we found was the US COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we have used contains socioeconomic, demographic, health care, education and transit data for each county in the 50 states in US. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code uniquely identifying each area. Thus, by joining these two data sets together in Excel, we obtained our master data. 
+The first dataset we found was the U.S. COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we used contains socioeconomic, demographic, health care, education and transit data for each county in the U.S. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code that uniquely identifies each county. Thus, by joining these two data sets together in Excel, we obtain our master data. 
 
-Furthermore, we are interested in the mortality rate and has chosen it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which from taking the natural log of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
+Furthermore, we are interested in the mortality rate and has set it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which is the natural logarithm of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
 
 # Investigation
 
-In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affects the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose single models were tested significant at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
+In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affects the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose corresponding single-variable models were tested significant at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
 
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
-```{r}
+```{r, fig.pos="H"}
 d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
 kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables",linesep = "")%>%
   kable_styling(position = "center", full_width = FALSE,latex_options = "HOLD_position")%>%
@@ -78,13 +78,13 @@ kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory 
 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity.
 
-```{r}
+```{r, fig.pos="H"}
 x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 cor_matrix <- cor(x)
 output_matrix <- round(cor_matrix,3)
 kable(output_matrix,align = "l",booktabs = T, caption = "Correlation Matrix",
       col.names = c("Elderly","Specilist","Physician","Unemployment", "Poverty","Migration", "Nurse"))%>%
-  kable_styling(position = "center", full_width = TRUE,latex_options = "HOLD_position")%>%
+  kable_styling(position = "center", full_width = TRUE, latex_options = "HOLD_position",font_size = 10)%>%
   column_spec(1, width = "12em")%>%
   column_spec(5, width = "6em")%>%
   column_spec(7, width = "5em")%>%
@@ -116,8 +116,7 @@ step.model$anova
 
 The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + Specialist + Physician_rate + Unemployment_rate_2018 + Migration) as the final model. However, we noticed the p-value for Physician_rate = 0.13894 > $\alpha = 0.05$ and the p-value for Unemployment_rate_2018 = 0.09422 > $\alpha = 0.05$, which do not indicate statistical significance. Thus, the model is not the most suitable model for our dataset.
 
-## Model selection process
-### All possible combinations
+## Model selection process with all possible combinations
 
 In order to find the best fitting model, we performed another model selection process by fitting all possible combinations.
 
@@ -181,9 +180,11 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
-### Backward elimination procedure
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4, we use below methods to find the best model.
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
+## Backward elimination procedure
+
+First, to compare model1 and model3, we use backward elimination procedure. 
 
 Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
 
@@ -199,7 +200,7 @@ summary(model1)
 
 Step 2: Repeat the procedure in step 1 with a simplified model excluding the Unemployment_rate_2018, which is the our model1. The p-value for ElderlyRate = 4.33e-07 < $\alpha = 0.05$,the p-value for Specialist = 0.02241 < $\alpha = 0.05$, p-value for Migration = 0.00516 < $\alpha = 0.05$, and the p-values for most categories under Region are under $\alpha = 0.05$. This suggests that all variables inside this model are statistically significant. Thus we cannot further simplify this model and this model would be one of our best models to consider.
 
-### Extra sum of squares principle
+## Extra sum of squares principle
 
 Next, to compare model2 and model4, we use the extra sum of squares principle since model2 is nested within model4. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
 
@@ -224,7 +225,7 @@ Hypothesis test:
 
 Thus we choose model2 as one of our best models to consider.
 
-### Log of Mortality Rate including interaction term
+## Log of Mortality Rate including interaction term
 
 Then, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity of these two variables.
 
@@ -280,7 +281,7 @@ Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + 
 
 Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable, but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, a very high VIF value (50.404208) of Specialist, suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study about the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study, since they can be difficult and time-consuming to implement. 
 
-In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have statistically significant effect on Morality. This model does the best job at representing the US mortality rate of COVID-19 at this stage of the study.
+In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have statistically significant effect on Morality. This model does the best job at representing the U.S. mortality rate of COVID-19 at this stage of the study.
 
 \pagebreak
 
