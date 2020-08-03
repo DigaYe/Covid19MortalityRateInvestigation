@@ -8,11 +8,11 @@ output:
   word_document: default
 fontsize: 10.5pt
 header-includes:
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead[R]{Group 1}
-\usepackage{float}
-\floatplacement{figure}{H}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[R]{Group 1}
+- \usepackage{float}
+
 bibliography: thebib.bib
 ---
 
