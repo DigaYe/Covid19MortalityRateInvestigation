@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  3 AUG 2020 16:59
+||||||| merged common ancestors
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 23:52
+||||||| merged common ancestors
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 23:20
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 23:28
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 23:59
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,6 +297,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen154
 \Gm@layoutvoffset=\dimen155
 \Gm@dimlist=\toks24
+<<<<<<< HEAD
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count267
@@ -292,9 +305,31 @@ Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
 \FV@TabBox=\box47
 \c@FancyVerbLine=\count268
 \FV@StepNumber=\count269
+||||||| merged common ancestors
+<<<<<<< HEAD
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count267
+\FV@InFile=\read2
+\FV@TabBox=\box47
+\c@FancyVerbLine=\count268
+\FV@StepNumber=\count269
+=======
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count116
+\FV@InFile=\read1
+\FV@TabBox=\box28
+\c@FancyVerbLine=\count117
+\FV@StepNumber=\count118
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \FV@OutFile=\write3
-) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+<<<<<<< HEAD
 \OuterFrameSep=\skip53
 \fb@frw=\dimen156
 \fb@frh=\dimen157
@@ -305,10 +340,47 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+||||||| merged common ancestors
+\OuterFrameSep=\skip53
+\fb@frw=\dimen156
+\fb@frh=\dimen157
+\FrameRule=\dimen158
+\FrameSep=\dimen159
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+||||||| merged common ancestors
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+=======
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\OuterFrameSep=\skip48
+\fb@frw=\dimen125
+\fb@frh=\dimen126
+\FrameRule=\dimen127
+\FrameSep=\dimen128
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
+<<<<<<< HEAD
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
 \Gin@req@height=\dimen160
@@ -320,7 +392,61 @@ Package grffile Info: This package is an empty stub for compatibility on input
 line 40.
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+||||||| merged common ancestors
+<<<<<<< HEAD
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+||||||| merged common ancestors
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+=======
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 s
+<<<<<<< HEAD
 \f@nch@headwidth=\skip54
 \f@nch@O@elh=\skip55
 \f@nch@O@erh=\skip56
@@ -331,11 +457,83 @@ s
 \f@nch@O@olf=\skip61
 \f@nch@O@orf=\skip62
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+||||||| merged common ancestors
+<<<<<<< HEAD
+\f@nch@headwidth=\skip54
+\f@nch@O@elh=\skip55
+\f@nch@O@erh=\skip56
+\f@nch@O@olh=\skip57
+\f@nch@O@orh=\skip58
+\f@nch@O@elf=\skip59
+\f@nch@O@erf=\skip60
+\f@nch@O@olf=\skip61
+\f@nch@O@orf=\skip62
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+||||||| merged common ancestors
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+=======
+\f@nch@headwidth=\skip48
+\f@nch@O@elh=\skip49
+\f@nch@O@erh=\skip50
+\f@nch@O@olh=\skip51
+\f@nch@O@orh=\skip52
+\f@nch@O@elf=\skip53
+\f@nch@O@erf=\skip54
+\f@nch@O@olf=\skip55
+\f@nch@O@orf=\skip56
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
+<<<<<<< HEAD
 \c@float@type=\count270
+||||||| merged common ancestors
+<<<<<<< HEAD
+\c@float@type=\count270
+||||||| merged common ancestors
+\c@float@type=\count267
+=======
+\c@float@type=\count116
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\c@float@type=\count119
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \float@exts=\toks25
+<<<<<<< HEAD
 \float@box=\box48
+||||||| merged common ancestors
+<<<<<<< HEAD
+\float@box=\box48
+||||||| merged common ancestors
+\float@box=\box47
+=======
+\float@box=\box28
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\float@box=\box29
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \@float@everytoks=\toks26
+<<<<<<< HEAD
 \@floatcapt=\box49
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -372,13 +570,193 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LT@rows=\count277
 \c@LT@tables=\count278
 \c@LT@chunks=\count279
+||||||| merged common ancestors
+<<<<<<< HEAD
+\@floatcapt=\box49
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count271
+\@cmidlb=\count272
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count273
+\@lastruleclass=\count274
+\@thisrulewidth=\dimen174
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip63
+\LTright=\skip64
+\LTpre=\skip65
+\LTpost=\skip66
+\LTchunksize=\count275
+\LTcapwidth=\dimen175
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count276
+\LT@rows=\count277
+\c@LT@tables=\count278
+\c@LT@chunks=\count279
+||||||| merged common ancestors
+\@floatcapt=\box48
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen158
+\lightrulewidth=\dimen159
+\cmidrulewidth=\dimen160
+\belowrulesep=\dimen161
+\belowbottomsep=\dimen162
+\aboverulesep=\dimen163
+\abovetopsep=\dimen164
+\cmidrulesep=\dimen165
+\cmidrulekern=\dimen166
+\defaultaddspace=\dimen167
+\@cmidla=\count268
+\@cmidlb=\count269
+\@aboverulesep=\dimen168
+\@belowrulesep=\dimen169
+\@thisruleclass=\count270
+\@lastruleclass=\count271
+\@thisrulewidth=\dimen170
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip62
+\LTright=\skip63
+\LTpre=\skip64
+\LTpost=\skip65
+\LTchunksize=\count272
+\LTcapwidth=\dimen171
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count273
+\LT@rows=\count274
+\c@LT@tables=\count275
+\c@LT@chunks=\count276
+=======
+\@floatcapt=\box29
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen127
+\lightrulewidth=\dimen128
+\cmidrulewidth=\dimen129
+\belowrulesep=\dimen130
+\belowbottomsep=\dimen131
+\aboverulesep=\dimen132
+\abovetopsep=\dimen133
+\cmidrulesep=\dimen134
+\cmidrulekern=\dimen135
+\defaultaddspace=\dimen136
+\@cmidla=\count117
+\@cmidlb=\count118
+\@aboverulesep=\dimen137
+\@belowrulesep=\dimen138
+\@thisruleclass=\count119
+\@lastruleclass=\count120
+\@thisrulewidth=\dimen139
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count121
+\LTcapwidth=\dimen140
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count122
+\LT@rows=\count123
+\c@LT@tables=\count124
+\c@LT@chunks=\count125
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\@floatcapt=\box30
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen131
+\lightrulewidth=\dimen132
+\cmidrulewidth=\dimen133
+\belowrulesep=\dimen134
+\belowbottomsep=\dimen135
+\aboverulesep=\dimen136
+\abovetopsep=\dimen137
+\cmidrulesep=\dimen138
+\cmidrulekern=\dimen139
+\defaultaddspace=\dimen140
+\@cmidla=\count120
+\@cmidlb=\count121
+\@aboverulesep=\dimen141
+\@belowrulesep=\dimen142
+\@thisruleclass=\count122
+\@lastruleclass=\count123
+\@thisrulewidth=\dimen143
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count124
+\LTcapwidth=\dimen144
+\LT@head=\box31
+\LT@firsthead=\box32
+\LT@foot=\box33
+\LT@lastfoot=\box34
+\LT@cols=\count125
+\LT@rows=\count126
+\c@LT@tables=\count127
+\c@LT@chunks=\count128
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \LT@p@ftn=\toks27
+<<<<<<< HEAD
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen176
 \ar@mcellbox=\box54
 \extrarowheight=\dimen177
+||||||| merged common ancestors
+<<<<<<< HEAD
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen176
+\ar@mcellbox=\box54
+\extrarowheight=\dimen177
+||||||| merged common ancestors
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen172
+\ar@mcellbox=\box53
+\extrarowheight=\dimen173
+=======
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen141
+\ar@mcellbox=\box34
+\extrarowheight=\dimen142
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen145
+\ar@mcellbox=\box35
+\extrarowheight=\dimen146
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \NC@list=\toks28
+<<<<<<< HEAD
 \extratabsurround=\skip67
 \backup@length=\skip68
 \ar@cellbox=\box55
@@ -393,15 +771,102 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \WF@size=\dimen180
 \c@WF@wrappedlines=\count281
 \WF@box=\box56
+||||||| merged common ancestors
+<<<<<<< HEAD
+\extratabsurround=\skip67
+\backup@length=\skip68
+\ar@cellbox=\box55
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip69
+\multirow@cntb=\count280
+\multirow@dima=\skip70
+\bigstrutjot=\dimen178
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen179
+\WF@size=\dimen180
+\c@WF@wrappedlines=\count281
+\WF@box=\box56
+||||||| merged common ancestors
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box54
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip68
+\multirow@cntb=\count277
+\multirow@dima=\skip69
+\bigstrutjot=\dimen174
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen175
+\WF@size=\dimen176
+\c@WF@wrappedlines=\count278
+\WF@box=\box55
+=======
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box35
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count126
+\multirow@dima=\skip64
+\bigstrutjot=\dimen143
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen144
+\WF@size=\dimen145
+\c@WF@wrappedlines=\count127
+\WF@box=\box36
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box36
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count129
+\multirow@dima=\skip65
+\bigstrutjot=\dimen147
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen148
+\WF@size=\dimen149
+\c@WF@wrappedlines=\count130
+\WF@box=\box37
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks30
+<<<<<<< HEAD
 \minrowclearance=\skip71
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+||||||| merged common ancestors
+<<<<<<< HEAD
+\minrowclearance=\skip71
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+||||||| merged common ancestors
+\minrowclearance=\skip70
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+=======
+\minrowclearance=\skip65
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\minrowclearance=\skip66
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/lscape.sty
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -409,6 +874,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+<<<<<<< HEAD
 \@vwid@box=\box57
 \sift@deathcycles=\count282
 \@vwid@loff=\dimen181
@@ -429,8 +895,96 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \abovetabulinesep=\dimen189
 \belowtabulinesep=\dimen190
 \tabustrutrule=\dimen191
+||||||| merged common ancestors
+<<<<<<< HEAD
+\@vwid@box=\box57
+\sift@deathcycles=\count282
+\@vwid@loff=\dimen181
+\@vwid@roff=\dimen182
+)
+\c@taburow=\count283
+\tabu@nbcols=\count284
+\tabu@cnt=\count285
+\tabu@Xcol=\count286
+\tabu@alloc=\count287
+\tabu@nested=\count288
+\tabu@target=\dimen183
+\tabu@spreadtarget=\dimen184
+\tabu@naturalX=\dimen185
+\tabucolX=\dimen186
+\tabu@Xsum=\dimen187
+\extrarowdepth=\dimen188
+\abovetabulinesep=\dimen189
+\belowtabulinesep=\dimen190
+\tabustrutrule=\dimen191
+||||||| merged common ancestors
+\@vwid@box=\box56
+\sift@deathcycles=\count279
+\@vwid@loff=\dimen177
+\@vwid@roff=\dimen178
+)
+\c@taburow=\count280
+\tabu@nbcols=\count281
+\tabu@cnt=\count282
+\tabu@Xcol=\count283
+\tabu@alloc=\count284
+\tabu@nested=\count285
+\tabu@target=\dimen179
+\tabu@spreadtarget=\dimen180
+\tabu@naturalX=\dimen181
+\tabucolX=\dimen182
+\tabu@Xsum=\dimen183
+\extrarowdepth=\dimen184
+\abovetabulinesep=\dimen185
+\belowtabulinesep=\dimen186
+\tabustrutrule=\dimen187
+=======
+\@vwid@box=\box37
+\sift@deathcycles=\count128
+\@vwid@loff=\dimen146
+\@vwid@roff=\dimen147
+)
+\c@taburow=\count129
+\tabu@nbcols=\count130
+\tabu@cnt=\count131
+\tabu@Xcol=\count132
+\tabu@alloc=\count133
+\tabu@nested=\count134
+\tabu@target=\dimen148
+\tabu@spreadtarget=\dimen149
+\tabu@naturalX=\dimen150
+\tabucolX=\dimen151
+\tabu@Xsum=\dimen152
+\extrarowdepth=\dimen153
+\abovetabulinesep=\dimen154
+\belowtabulinesep=\dimen155
+\tabustrutrule=\dimen156
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\@vwid@box=\box38
+\sift@deathcycles=\count131
+\@vwid@loff=\dimen150
+\@vwid@roff=\dimen151
+)
+\c@taburow=\count132
+\tabu@nbcols=\count133
+\tabu@cnt=\count134
+\tabu@Xcol=\count135
+\tabu@alloc=\count136
+\tabu@nested=\count137
+\tabu@target=\dimen152
+\tabu@spreadtarget=\dimen153
+\tabu@naturalX=\dimen154
+\tabucolX=\dimen155
+\tabu@Xsum=\dimen156
+\extrarowdepth=\dimen157
+\abovetabulinesep=\dimen158
+\belowtabulinesep=\dimen159
+\tabustrutrule=\dimen160
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \tabu@thebody=\toks31
 \tabu@footnotes=\toks32
+<<<<<<< HEAD
 \tabu@box=\box58
 \tabu@arstrutbox=\box59
 \tabu@hleads=\box60
@@ -439,8 +993,57 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 )
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable
 .sty
+||||||| merged common ancestors
+<<<<<<< HEAD
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
+\tabu@cellskip=\skip72
+)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable
+.sty
+||||||| merged common ancestors
+\tabu@box=\box57
+\tabu@arstrutbox=\box58
+\tabu@hleads=\box59
+\tabu@vleads=\box60
+\tabu@cellskip=\skip71
+)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable
+.sty
+=======
+\tabu@box=\box38
+\tabu@arstrutbox=\box39
+\tabu@hleads=\box40
+\tabu@vleads=\box41
+\tabu@cellskip=\skip66
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\tabu@box=\box39
+\tabu@arstrutbox=\box40
+\tabu@hleads=\box41
+\tabu@vleads=\box42
+\tabu@cellskip=\skip67
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package: threeparttable 2003/06/13  v 3.0
+<<<<<<< HEAD
 \@tempboxb=\box62
+||||||| merged common ancestors
+<<<<<<< HEAD
+\@tempboxb=\box62
+||||||| merged common ancestors
+\@tempboxb=\box61
+=======
+\@tempboxb=\box42
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\@tempboxb=\box43
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 )
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttabl
 ex.sty
@@ -450,12 +1053,41 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
+<<<<<<< HEAD
 \TPTL@width=\skip73
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box63
 \UL@hyphenbox=\box64
 \UL@skip=\skip74
+||||||| merged common ancestors
+<<<<<<< HEAD
+\TPTL@width=\skip73
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box63
+\UL@hyphenbox=\box64
+\UL@skip=\skip74
+||||||| merged common ancestors
+\TPTL@width=\skip72
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box62
+\UL@hyphenbox=\box63
+\UL@skip=\skip73
+=======
+\TPTL@width=\skip67
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box43
+\UL@hyphenbox=\box44
+\UL@skip=\skip68
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\TPTL@width=\skip68
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box44
+\UL@hyphenbox=\box45
+\UL@skip=\skip69
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \UL@hook=\toks33
+<<<<<<< HEAD
 \UL@height=\dimen192
 \UL@pe=\count289
 \UL@pixel=\dimen193
@@ -463,16 +1095,87 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: ulem 2019/11/18
 \ULdepth=\dimen194
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+||||||| merged common ancestors
+<<<<<<< HEAD
+\UL@height=\dimen192
+\UL@pe=\count289
+\UL@pixel=\dimen193
+\ULC@box=\box65
+Package: ulem 2019/11/18
+\ULdepth=\dimen194
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+||||||| merged common ancestors
+\UL@height=\dimen188
+\UL@pe=\count286
+\UL@pixel=\dimen189
+\ULC@box=\box64
+Package: ulem 2019/11/18
+\ULdepth=\dimen190
+) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+=======
+\UL@height=\dimen157
+\UL@pe=\count135
+\UL@pixel=\dimen158
+\ULC@box=\box45
+Package: ulem 2012/05/18
+\ULdepth=\dimen159
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\UL@height=\dimen161
+\UL@pe=\count138
+\UL@pixel=\dimen162
+\ULC@box=\box46
+Package: ulem 2012/05/18
+\ULdepth=\dimen163
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+<<<<<<< HEAD
 \rotheadsize=\dimen195
 \c@nlinenum=\count290
+||||||| merged common ancestors
+<<<<<<< HEAD
+\rotheadsize=\dimen195
+\c@nlinenum=\count290
+||||||| merged common ancestors
+\rotheadsize=\dimen191
+\c@nlinenum=\count287
+=======
+\rotheadsize=\dimen160
+\c@nlinenum=\count136
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\rotheadsize=\dimen164
+\c@nlinenum=\count139
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 \TeXr@lab=\toks34
+<<<<<<< HEAD
 )
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
 ef
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count291
 \l__pdf_internal_box=\box66
+||||||| merged common ancestors
+<<<<<<< HEAD
+)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
+ef
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count291
+\l__pdf_internal_box=\box66
+||||||| merged common ancestors
+)
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
+ef
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count288
+\l__pdf_internal_box=\box65
+=======
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 ) (./Final-Report.aux
 
 LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
@@ -482,18 +1185,17 @@ LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
 LaTeX Font Info:    ... okay on input line 122.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
@@ -502,14 +1204,161 @@ LaTeX Font Info:    ... okay on input line 122.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 y
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+||||||| merged common ancestors
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+||||||| merged common ancestors
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 82.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 82.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \microtypecontext on input line 82.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count137
+\scratchdimen=\dimen161
+\scratchbox=\box46
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen162
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks36
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 122.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 122.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \microtypecontext on input line 122.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count140
+\scratchdimen=\dimen165
+\scratchbox=\box47
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen166
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks36
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<<<<<<< HEAD
 \AtBeginShipoutBox=\box67
+||||||| merged common ancestors
+<<<<<<< HEAD
+\AtBeginShipoutBox=\box67
+=======
+\AtBeginShipoutBox=\box48
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 Package hyperref Info: Link coloring OFF on input line 122.
+<<<<<<< HEAD
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -520,14 +1369,84 @@ ng.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count292
+||||||| merged common ancestors
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+||||||| merged common ancestors
+\AtBeginShipoutBox=\box66
+Package hyperref Info: Link coloring OFF on input line 82.
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+=======
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring OFF on input line 82.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
 )
+<<<<<<< HEAD
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestri
+ng.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count292
+||||||| merged common ancestors
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestri
+ng.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+=======
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
+)
+<<<<<<< HEAD
+||||||| merged common ancestors
+\c@section@level=\count289
+=======
+\c@section@level=\count143
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+)
+<<<<<<< HEAD
+=======
+\c@section@level=\count146
+)
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 LaTeX Info: Redefining \ref on input line 122.
 LaTeX Info: Redefining \pageref on input line 122.
 LaTeX Info: Redefining \nameref on input line 122.
+<<<<<<< HEAD
 (./Final-Report.out) (./Final-Report.out)
 \@outlinefile=\write4
 \openout4 = `Final-Report.out'.
 
+||||||| merged common ancestors
+(./Final-Report.out) (./Final-Report.out)
+\@outlinefile=\write4
+\openout4 = `Final-Report.out'.
+
+||||||| merged common ancestors
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
+(./Final-Report.out) (./Final-Report.out)
+\@outlinefile=\write3
+\openout3 = `Final-Report.out'.
+
+=======
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -597,34 +1516,130 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
+<<<<<<< HEAD
 \tf@toc=\write5
 \openout5 = `Final-Report.toc'.
+||||||| merged common ancestors
+<<<<<<< HEAD
+\tf@toc=\write5
+\openout5 = `Final-Report.toc'.
+||||||| merged common ancestors
+\tf@toc=\write4
+\openout4 = `Final-Report.toc'.
+=======
+\tf@toc=\write3
+\openout3 = `Final-Report.toc'.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+\tf@toc=\write4
+\openout4 = `Final-Report.toc'.
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 
 [1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
+<<<<<<< HEAD
 Overfull \hbox (5.61691pt too wide) in paragraph at lines 268--268
 []\T1/lmr/m/n/10 Elderly|  
+||||||| merged common ancestors
+<<<<<<< HEAD
+Overfull \hbox (5.61691pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 Elderly|  
+||||||| merged common ancestors
+Overfull \hbox (5.61691pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 Elderly|  
+=======
+Overfull \hbox (4.9858pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 (-20) Elderly|  
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Overfull \hbox (4.9858pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 (-20) Elderly|  
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (10.5058pt too wide) in paragraph at lines 268--268
 []\T1/lmr/m/n/10 Specilist|  
+||||||| merged common ancestors
+<<<<<<< HEAD
+Overfull \hbox (10.5058pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 Specilist|  
+||||||| merged common ancestors
+Overfull \hbox (10.5058pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 Specilist|  
+=======
+Overfull \hbox (9.78247pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 (-20) Specilist|  
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Overfull \hbox (9.78247pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 (-20) Specilist|  
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (1.86119pt too wide) in paragraph at lines 268--268
 []\T1/lmr/m/n/10 Physician|  
+||||||| merged common ancestors
+<<<<<<< HEAD
+Overfull \hbox (1.86119pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 Physician|  
+||||||| merged common ancestors
+Overfull \hbox (1.86119pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 Physician|  
+=======
+Overfull \hbox (1.0184pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 (-20) Physician|  
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Overfull \hbox (1.0184pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 (-20) Physician|  
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (6.11066pt too wide) in paragraph at lines 268--268
 []\T1/lmr/m/n/10 Unemployment|  
+||||||| merged common ancestors
+<<<<<<< HEAD
+Overfull \hbox (6.11066pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 Unemployment|  
+||||||| merged common ancestors
+Overfull \hbox (6.11066pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 Unemployment|  
+=======
+Overfull \hbox (4.77734pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 (-20) Unemployment|  
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Overfull \hbox (4.77734pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 (-20) Unemployment|  
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (7.56175pt too wide) in paragraph at lines 268--268
 []\T1/lmr/m/n/10 Poverty|  
+||||||| merged common ancestors
+<<<<<<< HEAD
+Overfull \hbox (7.56175pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 Poverty|  
+||||||| merged common ancestors
+Overfull \hbox (7.56175pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 Poverty|  
+=======
+Overfull \hbox (6.86952pt too wide) in paragraph at lines 228--228
+[]\T1/lmr/m/n/10 (-20) Poverty|  
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Overfull \hbox (6.86952pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10 (-20) Poverty|  
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  []
 
 [3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
@@ -640,10 +1655,44 @@ l.292
                                                   \fi \fi 
 l.292 
       ]
+<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 12.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+||||||| merged common ancestors
+<<<<<<< HEAD
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+12.
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+||||||| merged common ancestors
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+72.
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+=======
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 272.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 312.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+<<<<<<< HEAD
+||||||| merged common ancestors
+)
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 300
+.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+=======
+)
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 340
+.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 ) [4pdfTeX warning (ext4): destination with the same identifier (name{table.3})
  has been already used, duplicate ignored
 
@@ -662,6 +1711,7 @@ le.5}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.476 
+<<<<<<< HEAD
       ]
 Underfull \hbox (badness 1158) in paragraph at lines 513--516
 \T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Spe-
@@ -670,6 +1720,34 @@ cial-ist + Mi-gra-tion + Un-em-ploy-
 
 [7pdfTeX warning (ext4): destination with the same identifier (name{table.6}) h
 as been already used, duplicate ignored
+||||||| merged common ancestors
+      ]
+Underfull \hbox (badness 1158) in paragraph at lines 513--516
+\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Spe-
+cial-ist + Mi-gra-tion + Un-em-ploy-
+ []
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{table.6}) h
+as been already used, duplicate ignored
+||||||| merged common ancestors
+l.433 
+      ]
+Underfull \hbox (badness 1158) in paragraph at lines 472--475
+[]\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
+e-cial-ist + Mi-gra-tion + Un-em-ploy-
+ []
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{table.6}) h
+as been already used, duplicate ignored
+=======
+l.436 
+      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.6}) has been already used, duplicate ignored
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.6}) has been already used, duplicate ignored
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -681,34 +1759,72 @@ er (name{table.7}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.517 \begin{verbatim}
                       ] [8] [9] [10]
+<<<<<<< HEAD
 <Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=185, 722.7pt x 722.7pt>
+||||||| merged common ancestors
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=185, 722.7pt x 722.7pt>
+||||||| merged common ancestors
+l.475 
+      ] [8] [9] [10]
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=185, 722.7pt x 722.7pt>
+=======
+l.477 \begin{verbatim}
+                      ] [8] [9] [10]
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=122, 710.655pt x 676.5275
+pt>
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=122, 710.655pt x 676.5275
+pt>
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 File: Final-Report_files/figure-latex/Plotmodel1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/Plotmodel1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/Plotmodel1-1.pdf  used
  on input line 765.
+<<<<<<< HEAD
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
+||||||| merged common ancestors
+(pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
+||||||| merged common ancestors
+ on input line 721.
+(pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
+=======
+ on input line 725.
+(pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+(pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 [11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< HEAD
 l.786 ...stant Variance}\label{constant-variance}}
                                                    <./Final-Report_files/figure
 -latex/Plotmodel1-1.pdf>] [13] [14] [15] [16] [17] [18]
+||||||| merged common ancestors
+<<<<<<< HEAD
+l.786 ...stant Variance}\label{constant-variance}}
+                                                   <./Final-Report_files/figure
+-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16] [17] [18]
+=======
+l.795 
+       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
+] [17] [18]
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1079.
-
-Overfull \vbox (0.43936pt too high) detected at line 1270
- []
-
 [19]
-Underfull \vbox (badness 10000) detected at line 1270
+Underfull \vbox (badness 10000) detected at line 1230
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1270
+Underfull \vbox (badness 10000) detected at line 1230
  []
 
+<<<<<<< HEAD
 [20]
 Underfull \vbox (badness 10000) detected at line 1270
  []
@@ -721,18 +1837,89 @@ Underfull \vbox (badness 10000) detected at line 1270
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1305.
 [23]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1305.
+||||||| merged common ancestors
+||||||| merged common ancestors
+l.750 
+       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
+] [17] [18] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1065.
+=======
+l.755 
+       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
+] [17] [18] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1070.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+[20]
+<<<<<<< HEAD
+Underfull \vbox (badness 10000) detected at line 1270
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1270
+ []
+
+[21] [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1305.
+[23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1305.
+||||||| merged common ancestors
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1065.
+=======
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1070.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+[20] [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1265.
+[22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1265.
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 (./Final-Report.aux)
+<<<<<<< HEAD
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1305.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1305.
 
 Package rerunfilecheck Info: File `Final-Report.out' has not changed.
 (rerunfilecheck)             Checksum: 1E014442337BC48A417FA0D92746C29B;3098.
+||||||| merged common ancestors
+<<<<<<< HEAD
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1305.
+
+Package rerunfilecheck Info: File `Final-Report.out' has not changed.
+(rerunfilecheck)             Checksum: 1E014442337BC48A417FA0D92746C29B;3098.
+||||||| merged common ancestors
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1065.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1065.
+
+Package rerunfilecheck Info: File `Final-Report.out' has not changed.
+(rerunfilecheck)             Checksum: 1E014442337BC48A417FA0D92746C29B;3098.
+=======
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1070.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1070.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1265.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1265.
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 
 LaTeX Warning: There were multiply-defined labels.
 
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1305.
+||||||| merged common ancestors
+<<<<<<< HEAD
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1305.
+||||||| merged common ancestors
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1065.
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1070.
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1265.
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  12650 strings out of 482854
  179608 string characters out of 5956102
  478882 words of memory out of 5000000
@@ -756,9 +1943,128 @@ ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/diga/Lib
 rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/diga/Library/T
 inyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
 Output written on Final-Report.pdf (23 pages, 702857 bytes).
+||||||| merged common ancestors
+<<<<<<< HEAD
+ 12650 strings out of 482854
+ 179608 string characters out of 5956102
+ 478882 words of memory out of 5000000
+ 27663 multiletter control sequences out of 15000+600000
+ 569409 words of font info for 56 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 43i,15n,45p,640b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/
+diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/diga/L
+ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
+yTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</Users/diga/Library/TinyTeX/t
+exmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/diga/Library/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fo
+nts/type1/public/lm/lmmi10.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmmi7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/pub
+lic/lm/lmr10.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
+fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
+sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
+ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/diga/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/diga/Library/T
+inyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Final-Report.pdf (23 pages, 702857 bytes).
+||||||| merged common ancestors
+ 12189 strings out of 482854
+ 172687 string characters out of 5956102
+ 446861 words of memory out of 5000000
+ 27215 multiletter control sequences out of 15000+600000
+ 568772 words of font info for 54 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 43i,15n,45p,397b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
+ers/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/diga/L
+ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
+yTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</Users/diga/Library/TinyTeX/t
+exmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/diga/Library/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fo
+nts/type1/public/lm/lmmi10.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmmi7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/pub
+lic/lm/lmr10.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
+fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
+sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
+ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Final-Report.pdf (20 pages, 646358 bytes).
+=======
+ 14448 strings out of 492649
+ 209479 string characters out of 6129622
+ 343139 words of memory out of 5000000
+ 17927 multiletter control sequences out of 15000+600000
+ 41881 words of font info for 82 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,16n,43p,712b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2
+018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist
+/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathit.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/l
+mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Final-Report.pdf (20 pages, 648683 bytes).
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+ 14903 strings out of 492649
+ 216340 string characters out of 6129622
+ 374981 words of memory out of 5000000
+ 18369 multiletter control sequences out of 15000+600000
+ 42825 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,16n,43p,2171b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
+/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/
+texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2018/texmf-dist
+/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathit.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/l
+mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Final-Report.pdf (22 pages, 704317 bytes).
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 PDF statistics:
+<<<<<<< HEAD
  338 PDF objects out of 1000 (max. 8388607)
  296 compressed objects within 3 object streams
  85 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
+||||||| merged common ancestors
+<<<<<<< HEAD
+ 338 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+||||||| merged common ancestors
+ 317 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 322 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 8366 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> e8b43b990c9707c49e29c4e99c50692f99d13c01
+=======
+ 340 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 8366 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 6ec8377fffc88b1ee73427066a5116b5e234cdb2
 
