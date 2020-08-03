@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -799,27 +799,27 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-Overfull \hbox (4.9858pt too wide) in paragraph at lines 225--225
+Overfull \hbox (4.9858pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (-20) Elderly|  
  []
 
 
-Overfull \hbox (9.78247pt too wide) in paragraph at lines 225--225
+Overfull \hbox (9.78247pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (-20) Specilist|  
  []
 
 
-Overfull \hbox (1.0184pt too wide) in paragraph at lines 225--225
+Overfull \hbox (1.0184pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (-20) Physician|  
  []
 
 
-Overfull \hbox (4.77734pt too wide) in paragraph at lines 225--225
+Overfull \hbox (4.77734pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (-20) Unemployment|  
  []
 
 
-Overfull \hbox (6.86952pt too wide) in paragraph at lines 225--225
+Overfull \hbox (6.86952pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (-20) Poverty|  
  []
 
@@ -828,20 +828,20 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.249 
+l.250 
       pdfTeX warning (ext4): destination with the same identifier (name{table.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.249 
+l.250 
       ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 269.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 270.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 297
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 298
 .
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -850,57 +850,57 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.297 \end{verbatim}
+l.298 \end{verbatim}
                     ] [5pdfTeX warning (ext4): destination with the same identi
 fier (name{table.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.388 
+l.389 
       ] [6pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.430 
+l.431 
       ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.497 \end{verbatim}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.7}) has been already used, duplicate ignored
+l.473 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.7
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.497 \end{verbatim}
-                    ] [8] [9] [10]
+l.473 
+      ] [8] [9] [10]
 <Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=122, 710.655pt x 676.5275
 pt>
 File: Final-Report_files/figure-latex/Plotmodel1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/Plotmodel1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/Plotmodel1-1.pdf  used
- on input line 715.
+ on input line 719.
 (pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
 [11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.755 \subsection{Outliers:}\label{outliers}}
-                                              <./Final-Report_files/figure-late
-x/Plotmodel1-1.pdf>] [13] [14] [15] [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1054.
+l.757 
+       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
+] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1058.
 [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1054.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1058.
 (./Final-Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1054.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1054.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1058.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1058.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1054.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1058.
  ) 
 Here is how much of TeX's memory you used:
  14448 strings out of 492649
@@ -909,7 +909,7 @@ Here is how much of TeX's memory you used:
  17927 multiletter control sequences out of 15000+600000
  41964 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,16n,43p,712b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,16n,43p,712b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2
 018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist
@@ -923,7 +923,7 @@ ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
 pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (19 pages, 648145 bytes).
+Output written on Final-Report.pdf (19 pages, 648485 bytes).
 PDF statistics:
  315 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams

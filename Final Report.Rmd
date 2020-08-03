@@ -181,9 +181,11 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4, we use below methods to find the best model.
+
 ## Backward elimination procedure
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
+First, to compare model1 and model3, we use backward elimination procedure. 
 
 Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
 
