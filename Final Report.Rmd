@@ -191,7 +191,7 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with a comparison between model1 and model3. 
+By comparing this result, we notice that model1, model2, model3, and model4 generally have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with a comparison between model1 and model3. 
 
 ## Backward elimination procedure
 
@@ -251,7 +251,7 @@ summary(model_int)
 anova(model_int)
 ```
 
-Observe the above summary with the addition of interaction term between Specialist and Migration. The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher than the model1. The adjusted $R^2$ = 0.02163 is lower than 0.0218 from model1, meaning that the model with the interaction term explains less variability of the response variable. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Moreover, the global F-statistic = 6.463, which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to keep model1. 
+Observe the above summary with the addition of interaction term between Specialist and Migration. The p-value for the interation term itself is 0.4025 > $\alpha = 0.05$, proving the term to be not signigicant. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher than that of model1. The adjusted $R^2$ = 0.02163 is lower than 0.0218 from model1, meaning that the model with the interaction term explains less variability of the response variable. Moreover, the global F-statistic = 6.463, which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to keep model1. 
 
 We notice from the previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value of more than 50, and Migration has a VIF value of 5 indicating multicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model and will need to investigate on this multicollinearity issue using a larger dataset.
 
@@ -266,9 +266,9 @@ par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
 
-## Mean of 0 
+## Mean of Zero 
 
-Looking at the plot of Residuals vs. Fitted values, the residuals do appear randomly scatter around the value 0, whereas there are some points far off (such as observation 99, 898 & 1114) the majority of the data points. However, the model overall appears to fairly satisfy the assumption of mean of 0.
+Looking at the plot of Residuals vs. Fitted values, the residuals do appear randomly scatter around the value 0, whereas there are some points far off (such as observation 99, 898 & 1114) the majority of the data points. However, the model overall appears to fairly satisfy the assumption of mean of zero.
 
 ## Independence 
 
@@ -294,9 +294,9 @@ We found that Elderly rate, number of Specialists, number of International migra
 
 # Limitation and Conclusion
 
-Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as our best model, there is still a great degree of limitation from using this model to analyze the mortality rate of COVID-19. First, model 1 has a low explanatory power. Specifically, $R^2_{adj}$ = 0.0218, which means model 1 could only explain 2.18% of variability of the COVID-19 mortality rate. This indicates that there is a large room for model improvement. Thus, further investigation on factors is desired. 
+Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as our best model, there is still a great degree of limitation from using this model to analyze the mortality rate of COVID-19. First, model 1 has a low explanatory power. Specifically, $R^2_{adj}$ = 0.0218, which means model 1 could only explain 2.18% of variability of the COVID-19 mortality rate. This indicates that there is a large room for model improvement. Thus, further investigation on additional explanatory variables is desired. 
 
-Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, a very high VIF value (50.404208) of Specialist, suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study on the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study since they can be difficult and time-consuming to implement. 
+Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, Specialist has a very high VIF value (50.404208), suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study on the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study since they can be difficult and time-consuming to implement. 
 
 In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have a statistically significant effect on Morality. This model does the best job of representing the U.S. mortality rate of COVID-19 at this stage of the study.
 
