@@ -33,6 +33,7 @@ For the past 5 months, the coronavirus (COVID-19) pandemic has been raging all o
 
 From our previous report, we have found some statistically significant variables to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specially discovering in reasonable factors that are statistically significant to COVID-19 mortality rate. Based on all these results, we preform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
 
+
 # Dataset Description 
 
 ```{r  include=FALSE, message=FALSE}
