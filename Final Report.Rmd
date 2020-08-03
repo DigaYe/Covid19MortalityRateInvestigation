@@ -60,8 +60,7 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 
 The first dataset we found was the US COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we have used contains socioeconomic, demographic, health care, education and transit data for each county in the 50 states in US. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code uniquely identifying each area. Thus, by joining these two data sets together in Excel, we obtained our master data. 
 
-Furthermore, we are interested in the mortality rate and has chosen it to be our response variable. To satisfy the normality
-assumption, we created a column called Mortality, which from taking the natural log of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
+Furthermore, we are interested in the mortality rate and has chosen it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which from taking the natural log of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
 
 # Investigation
 
@@ -70,10 +69,10 @@ In the previous report, we have identified 6 individually significant explanator
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
 ```{r}
-d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), Pvalue = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
+d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
 kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables")%>%
   kable_styling(position = "center", full_width = FALSE)%>%
-  column_spec(1, width = "19em")
+  column_spec(1, width = "20em")
 ```
 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity.
@@ -81,11 +80,18 @@ As shown above, all 9 of those explanatory variables are statistically significa
 ```{r}
 x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 cor_matrix <- cor(x)
-round(cor_matrix,3)
+output_matrix <- round(cor_matrix,3)
+kable(output_matrix,align = "l",booktabs = T, caption = "Correlation Matrix")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "5em")%>%
+  column_spec(4, width = "5em")
 
 fullmodel<-lm(Mortality ~ ElderlyRate + factor(Region) + Specialist + factor(population) + Physician_rate + Unemployment_rate_2018 + Poverty + Migration + Nurse)
 
-vif(fullmodel)
+vif_value <- vif(fullmodel)
+kable(vif_value,align = "l",booktabs = T, caption = "VIF Values")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "10em")
 ```
 
 Observe the correlation matrix. Using 0.8 as a cutoff, we see signs of multicollinearity issues in the following pairs of variables: Specialist & Poverty, Specialist & Migration, Specialist & Nurse, Poverty & Migration, Poverty & Nurse, Migration & Nurse. 
@@ -97,7 +103,8 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 ## Automatic model selection method
 To start our model selection process, we used the stepwise selection method first given the full model as the initial model to find the best model based on algorithm.
 ```{r}
-step.model <- stepAIC(fullmodel, direction = "both",  trace = FALSE)
+step.model <- stepAIC(fullmodel, direction = "both", 
+                      trace = FALSE)
 summary(step.model)
 step.model$anova
 ```
@@ -111,7 +118,10 @@ In order to find the best fitting model, we performed another model selection pr
 f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
 e <- summary(f)
 attach(e)
-cbind(which,cp,adjr2)
+combination <- cbind(which,cp,adjr2)
+kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP values")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "5em")
 ```
 ```{r DigaCpPlot}
 Covid19 %>% dplyr::select(-Mortality,-Region,-population) -> x 
@@ -141,41 +151,17 @@ A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,
 
 B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
 
-d2=data.frame(Model= c(1, 2, 3, 4, 5, 6,7, 8,9,10,11,12), Regression_Equation = c("$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{Region}$", "$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{Physician_rate} + x_{Region}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{Physician_rate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Poverty} + x_{Region} + x_{population}$","$y_{LogOfMortality} = x_{ElderlyRate} + x_{Specialist} + x_{Nurse} + x_{Migration} + x_{UnemploymentRate} + x_{PhysicianRate} + x_{Poverty} + x_{Region} + x_{population}$"))
-kable(d2,align = "l")
+d2=data.frame(Model= c(1, 2, 3, 4, 5, 6,7, 8,9,10,11,12), Regression_Equation = c("Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region", "Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population"))
+kable(d2,align = "l",booktabs = T, caption = "Figure 4: Models")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "5em")
 
 output_table <- data.frame(A, B[2]) 
-knitr::kable(output_table)
 
+kable(output_table,align = "l",booktabs = T, caption = "Figure 5: AIC and BIC values")%>%
+  kable_styling(position = "center", full_width = FALSE)%>%
+  column_spec(1, width = "5em")
 ```
-
-
-
-Model1: \
-Log of Mortality Rate ~ ElderlyRate + Specialist + Migration + Region \
-Model2: \
-Log of Mortality Rate ~ ElderlyRate + Nurse + Migration + Region \
-Model8: \
-Log of Mortality Rate ~ ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population
-- Model9: \
-Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
-
-Model3: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region \
-Model4: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region \
-Model5: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population \
-Model6: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  Region \
-Model7: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region \
-Model8: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
-\
-Model9: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
-\
-Model10: Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population \
-\
-Model11: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population \
-\
-Model12: Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population \
-\
-
 
 By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
 
@@ -262,7 +248,7 @@ In terms of the leverage and Standard Residual plot, it could seen that there is
 
 # Results
 
-We found that Elderly rate, number of Specialists, number of international migrations, and region are four variables that have major impacts to COVID-19 mortality rate given the dataset. This result matches with our initial speculation. Based on above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Further, the best linear model fitting for these variables is $Mortality = -3.700e+00 + (2.699e+00)x_{ElderlyRate} + (3.641e-05)x_{Specialist} - (2.297e-05 )x_{Migration} - (8.959e-02)x_{Northeast} - (1.422e-01)x{South} - (2.641e-01)x_{West}$. However, as Migration and Specialist are highly correlated, and both of them have high VIF, there can be potential multicollinearity issues and a larger dataset should be utilized to further discuss this. 
+We found that Elderly rate, number of Specialists, number of international migrations, and region are four variables that have major impacts to COVID-19 mortality rate given the dataset. This result matches with our initial speculation. Based on above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Further, the best linear model fitting for these variables is $Mortality = -3.700e+00 + (2.699e+00)x_{ElderlyRate} + (3.641e-05)x_{Specialist} - (2.297e-05 )x_{Migration} - (8.959e-02)x_{Northeast} - (1.422e-01)x{South} - (2.641e-01)x_{West}$. However, there can several limitations of this study and will be discussed below. 
 
 # Limitation of Study 
 

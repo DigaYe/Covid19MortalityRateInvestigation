@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,7 +463,14 @@ File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(./Final-Report.aux)
+(./Final-Report.aux
+
+LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
+
+
+LaTeX Warning: Label `tab:unnamed-chunk-6' multiply defined.
+
+)
 \openout1 = `Final-Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -589,104 +596,136 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
+Overfull \hbox (16.61137pt too wide) in paragraph at lines 216--216
+[]|\T1/lmr/m/n/10 Physician_rate|  
+ []
+
+
+Overfull \hbox (2.25017pt too wide) in paragraph at lines 218--218
+[]|\T1/lmr/m/n/10 ElderlyRate|  
+ []
+
+
+Overfull \hbox (16.61137pt too wide) in paragraph at lines 220--220
+[]|\T1/lmr/m/n/10 Physician_rate|  
+ []
+
+
+Overfull \hbox (68.36084pt too wide) in paragraph at lines 221--221
+[]|\T1/lmr/m/n/10 Unemployment_rate_2018|  
+ []
+
+
+Overfull \hbox (40.9958pt too wide) in paragraph at lines 214--228
+ [][] 
+ []
+
+
+Overfull \hbox (18.36084pt too wide) in paragraph at lines 244--244
+[]|\T1/lmr/m/n/10 Unemployment_rate_2018|  
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.271 \begin{verbatim}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{table.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.271 \begin{verbatim}
+                      ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-10.
+71.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3pdfTeX warning (ext4): destination with the same identifier (name{table.1})
+) [4pdfTeX warning (ext4): destination with the same identifier (name{table.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.240 \end{verbatim}
-                    ] [4] [5]
-<Final-Report_files/figure-latex/DigaCpPlot-1.pdf, id=138, 469.755pt x 325.215p
+l.320 \end{verbatim}
+                    ]
+Overfull \hbox (525.05168pt too wide) in paragraph at lines 341--372
+ [][] 
+ []
+
+<Final-Report_files/figure-latex/DigaCpPlot-1.pdf, id=135, 469.755pt x 325.215p
 t>
 File: Final-Report_files/figure-latex/DigaCpPlot-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/DigaCpPlot-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/DigaCpPlot-1.pdf  used
- on input line 396.
+ on input line 374.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[6]
-Overfull \hbox (440.23395pt too wide) in paragraph at lines 402--431
-[][] 
- []
-
-[7 <./Final-Report_files/figure-latex/DigaCpPlot-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 462--474
-
+[5 <./Final-Report_files/figure-latex/DigaCpPlot-1.pdf>]
+Overfull \hbox (293.6928pt too wide) in paragraph at lines 384--404
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--503
-
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 509--512
+Underfull \hbox (badness 1158) in paragraph at lines 437--440
 []\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
 e-cial-ist + Mi-gra-tion + Un-em-ploy-
  []
 
-[8] [9] [10] [11]
-<Final-Report_files/figure-latex/model1-1.pdf, id=176, 722.7pt x 722.7pt>
+[6pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 \end{verbatim}
+                    ] [7pdfTeX warning (ext4): destination with the same identi
+fier (name{table.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 \end{verbatim}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{table.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 \end{verbatim}
+                    ] [8] [9] [10]
+<Final-Report_files/figure-latex/model1-1.pdf, id=177, 722.7pt x 722.7pt>
 File: Final-Report_files/figure-latex/model1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/model1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/model1-1.pdf  used on 
-input line 750.
+input line 678.
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
-[12] [13pdfTeX warning (ext4): destination with the same identifier (name{figur
+[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.781 \subsection{Normality:}\label{normality}}
-                                                <./Final-Report_files/figure-la
-tex/model1-1.pdf>] [14] [15] [16] [17] [18] [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1085.
-[21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1085.
+l.747 
+       <./Final-Report_files/figure-latex/model1-1.pdf>] [13] [14] [15] [16] [1
+7] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1012.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1012.
 (./Final-Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1085.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1085.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1012.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1012.
 
 Package rerunfilecheck Info: File `Final-Report.out' has not changed.
 (rerunfilecheck)             Checksum: 8981966D5966D9DBC299617C3A3D41E4;2270.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1085.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1012.
  ) 
 Here is how much of TeX's memory you used:
- 12147 strings out of 482854
- 172210 string characters out of 5956102
- 445521 words of memory out of 5000000
- 27182 multiletter control sequences out of 15000+600000
+ 12153 strings out of 482854
+ 172294 string characters out of 5956102
+ 451691 words of memory out of 5000000
+ 27185 multiletter control sequences out of 15000+600000
  568772 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,12n,45p,278b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,45p,278b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
 ers/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/diga/L
 ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
@@ -700,10 +739,10 @@ lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
 fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
 sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
 ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (21 pages, 650273 bytes).
+Output written on Final-Report.pdf (19 pages, 646566 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
