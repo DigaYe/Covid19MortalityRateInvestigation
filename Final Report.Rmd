@@ -24,14 +24,14 @@ knitr::opts_chunk$set(echo = FALSE, tidy = TRUE,tidy.opts=list(width.cutoff= 70)
 
 # Abstract
 
-The purpose of this study is to identify the factors that prominently affect the U.S. COVID-19 mortality rate. We used a dataset comprising various information of 1739 different US counties, which contains the variable of interest- the mortality rate of each county, as well as over 300 potential explanatory variables, including but not limited to information on demographic and healthcare. The question of interest is to identify the most appropriate explanatory variables and to find the most suitable and statistically significant linear model to reflect these variables' effects on the mortality rate. We started by identifying the best 9 explanatory variables that were the most reasonable and statistically significant in their respective single models. Then, using the automatic model selection method, we identified the best 2 models for each model size. Next, by comparing their $R_{adj}^2$, AIC values, BIC values, $C_{p}$ values, and taking multicollinearity into consideration, we selected the final model consisting of 4 explanatory variables, including the percentage of the population above 65 years old in the county, the total number of specialist in the county, the incoming number of International immigrants in the county for the past year, and the large-scale region to which the county belongs, which is a categorical variable of 4 large region bounds. Based on our dataset, the linear model consisting of these 4 variables best represents the trend and variation of the mortality rate. Further studies on the US COVID-19 mortality rate is recommended where more suitable explanatory variables are included in order to increase the explanatory power of the model.
+The purpose of this study is to identify the factors that prominently affect the U.S. COVID-19 mortality rate. We used a dataset comprising various information of 1739 different US counties, which contains the variable of interest- the mortality rate of each county, as well as over 300 potential explanatory variables, including but not limited to information on demographicss and healthcare. The question of interest is to identify the most appropriate explanatory variables and to find the most suitable and statistically significant linear model to reflect these variables' effects on the mortality rate. We started by identifying the best 9 explanatory variables that were the most reasonable and statistically significant in their respective single models. Then, using the automatic model selection method, we identified the best 2 models for each model size. Next, by comparing their $R_{adj}^2$, AIC values, BIC values, $C_{p}$ values, and taking multicollinearity into consideration, we selected the final model consisting of 4 explanatory variables, including the percentage of the population above 65 years old in the county, the total number of specialist in the county, the incoming number of International immigrants in the county for the past year, and the large-scale region to which the county belongs, which is a categorical variable of 4 large region bounds. Based on our dataset, the linear model consisting of these 4 variables best represents the trend and variation of the mortality rate. Further studies on the US COVID-19 mortality rate is recommended where more suitable explanatory variables are included in order to increase the explanatory power of the model.
 
 
 # Introduction
 
 For the past 5 months, the Coronavirus (COVID-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the COVID-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the U.S. has a large number of confirmed cases (@coviddata), we would use the COVID-19 cases from the U.S. and the corresponding counties' data (@countydata) to analyze the causes of the mortality rate for this pandemic. 
 
-From our previous report (@371report1), we have found some statistically significant variables to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specially discovering in reasonable factors that are statistically significant to COVID-19 mortality rate. Based on all these results, we preform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
+From our previous report (@371report1), we have found some statistically significant variables to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specifically discovering reasonable factors that are statistically significant to the COVID-19 mortality rate. Based on all these results, we would perform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistically significant model. 
 
 # Dataset Description 
 
@@ -60,15 +60,15 @@ Covid19 <- data.frame(Mortality, ElderlyRate, Region, Specialist, population, Ph
 ```
 
 
-The first dataset we found was the U.S. COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we used contains socioeconomic, demographic, health care, education and transit data for each county in the U.S. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code that uniquely identifies each county. Thus, by joining these two data sets together in Excel, we obtain our master data. 
+The first dataset we found was the U.S. COVID-19 data, which recorded the mortality rate under each county (@coviddata). Another machine-readable dataset (@countydata) we used contains socioeconomic, demographic, health care, education and transit data for each county in the U.S. In total, there are 347 different factors in this dataset, such as the population estimate, migration rate, number of females, number of hospitals. Furthermore, both datasets include a key called the Federal Information Processing Standard Publication (FIPS) code, which is a five-digit code that uniquely identifies each county. Thus, by joining these two data sets together in Excel, we obtain our master data. 
 
-Furthermore, we are interested in the mortality rate and has set it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which is the natural logarithm of mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
+Furthermore, we are interested in the mortality rate and have set it to be our response variable. To satisfy the normality assumption, we created a column called Mortality, which is the natural logarithm of the mortality rate of each county. As such, we could use Mortality to be our response variable when computing the statistic models. 
 
 # Investigation
 
-In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affects the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose corresponding single-variable models were tested significant at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
+In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affect the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose corresponding single-variable models were tested significantly at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
 
-The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
+The p-values of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
 ```{r, fig.pos="H"}
 # Summary of fitting individual model with its corresponding p-value
@@ -110,7 +110,7 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 
 # Model Selection 
 ## Automatic model selection method
-To start our model selection process, we used the stepwise selection method first. Starting with the full model of all 9 variables, we begin the stepwise algorithm to find the best model.
+To start our model selection process, we use the stepwise selection method first. Starting with the full model of all 9 variables, we begin the stepwise algorithm to find the best model.
 ```{r}
 # Stepwise Automatic Model Selection Method
 step.model <- stepAIC(fullmodel, direction = "both",  trace = FALSE)
@@ -123,7 +123,6 @@ The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + 
 ## Model selection process with all possible combinations
 
 In order to find the best fitting model, we performed another model selection process by fitting all possible combinations.
-
 
 ```{r, fig.pos="H"}
 # Form a Table of Details about Models Used
@@ -147,7 +146,7 @@ kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP v
 ```
 
 
-From the result, we noticed that models containing at least 4 variables have fair Cp values, whereas models contianing 3 variables or less have Cp values of at least 11, which is way above the acceptable range. In addition, the $R_{adj}^2$ value increases with the number of variables in the model. Hence, we only consider models of 4 variables and above, as listed below. 
+From the result, we noticed that models containing at least 4 variables have fair Cp values, whereas models containing 3 variables or less have Cp values of at least 11, which is way above the acceptable range. In addition, the $R_{adj}^2$ value increases with the number of variables in the model. Hence, we only consider models of 4 variables and above, as listed below. 
 
 ```{r}
 # Suitable Models from Above Model Selection Process
@@ -192,7 +191,7 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with the comparison between model1 and model3. 
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with a comparison between model1 and model3. 
 
 ## Backward elimination procedure
 
@@ -214,7 +213,7 @@ Step 2: Repeat the procedure in step 1 with a simplified model excluding the Une
 
 ## Extra sum of squares principle
 
-Next, we use the extra sum of squares principle to compare to compare betwene model2 and model4 since they have a nested relationship. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
+Next, we use the extra sum of squares principle to compare between model2 and model4 since they have a nested relationship. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
 
 ```{r}
 # Model 2: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region
@@ -252,11 +251,11 @@ summary(model_int)
 anova(model_int)
 ```
 
-Observe the above summary with the addition of interaction term between Specialist and Migration. The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 is lower than 0.0218 from model1, meaning that the model with the interaction term explains less variability of the response variable. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Moreover, the global F-statistic = 6.463, which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to keep model1. 
+Observe the above summary with the addition of interaction term between Specialist and Migration. The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher than the model1. The adjusted $R^2$ = 0.02163 is lower than 0.0218 from model1, meaning that the model with the interaction term explains less variability of the response variable. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Moreover, the global F-statistic = 6.463, which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to keep model1. 
 
-We notice from previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value more than 50, and Migration has a VIF value of 5 indicating multicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model, and will need to investigate on this multicollinearity issue using a larger dataset.
+We notice from the previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value of more than 50, and Migration has a VIF value of 5 indicating multicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model and will need to investigate on this multicollinearity issue using a larger dataset.
 
-Based on the method we used and models we discussed, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model for the given COVID-19 dataset.
+Based on the method we used and the models we discussed, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model for the given COVID-19 dataset.
 
 
 # Assumption Checking 
@@ -277,7 +276,7 @@ The plot of Residuals vs. Fitted values shows that the residuals are randomly sc
 
 ## Constant Variance 
 
-The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is one data point near the bottom left that has a smaller residual, the red line bulges up and down in the middle of the plot, causing a slightly increase and decrease in variability. However, the assumption of constant variance is still considered fairly satisfied.
+The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is one data point near the bottom left that has a smaller residual, the red line bulges up and down in the middle of the plot, causing a slight increase and decrease in variability. However, the assumption of constant variance is still considered fairly satisfied.
 
 ## Normality 
 
@@ -291,15 +290,15 @@ Observe the leverage and Standard Residual plot. There is a point on the right e
 
 # Results
 
-We found that Elderly rate, number of Specialists, number of International migrations, and Region are four variables that have major impacts on COVID-19 mortality rate given the dataset. This result matches with our initial speculation. Based on the above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Furthermore, the best linear model fitting for these variables is $Mortality = -3.7 + (2.699)x_{ElderlyRate} + (3.641\times 10^{-5})x_{Specialist} - (2.297\times 10^{-5})x_{Migration} - (8.959\times 10^{-2})x_{Northeast} - (0.1422)x_{South} - (0.2641x_{West}$. However, there can several limitations of this study and will be discussed below. 
+We found that Elderly rate, number of Specialists, number of International migrations, and Region are four variables that have major impacts on the log of COVID-19 mortality rate given the dataset. This result matches our initial speculation. Based on the above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Furthermore, the best linear model fitting for these variables is $log(MortalityRate) = -3.7 + (2.699)x_{ElderlyRate} + (3.641\times 10^{-5})x_{Specialist} - (2.297\times 10^{-5})x_{Migration} - (8.959\times 10^{-2})x_{Northeast} - (0.1422)x_{South} - (0.2641x_{West}$. However, there can be several limitations of this study and will be discussed below. 
 
 # Limitation and Conclusion
 
-Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as our best model, there is still a great degree of limitation from using this model to analyze the mortality rate of COVID-19. First, model 1 has a low explanatory power. Specially, $R^2_{adj}$ = 0.0218, which means model 1 could only explain 2.18% percentage of variability of the mortality rate of COVID-19. This indicates that there is a large room for model improvement. Thus, a further investigation on factors are desired. 
+Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as our best model, there is still a great degree of limitation from using this model to analyze the mortality rate of COVID-19. First, model 1 has a low explanatory power. Specifically, $R^2_{adj}$ = 0.0218, which means model 1 could only explain 2.18% of variability of the COVID-19 mortality rate. This indicates that there is a large room for model improvement. Thus, further investigation on factors is desired. 
 
-Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable, but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, a very high VIF value (50.404208) of Specialist, suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study about the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study, since they can be difficult and time-consuming to implement. 
+Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, a very high VIF value (50.404208) of Specialist, suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study on the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study since they can be difficult and time-consuming to implement. 
 
-In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have statistically significant effect on Morality. This model does the best job at representing the U.S. mortality rate of COVID-19 at this stage of the study.
+In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have a statistically significant effect on Morality. This model does the best job of representing the U.S. mortality rate of COVID-19 at this stage of the study.
 
 \pagebreak
 
