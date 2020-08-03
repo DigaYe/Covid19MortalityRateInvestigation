@@ -49,6 +49,7 @@ library(knitr)
 library(kableExtra)
 alldata <- read.csv(here::here("data","counties.csv"), header=T) 
 attach(alldata)
+# Rename the variable 
 Physician_rate <- Active.Physicians.per.100000.Population.2018..AAMC.
 Specialist <- All.Specialties..AAMC.
 ElderlyRate <- Pop_Above_65
@@ -70,6 +71,7 @@ In the previous report, we have identified 6 individually significant explanator
 The p-value of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
 
 ```{r, fig.pos="H"}
+# Summary of fitting individual model with its corresponding p-value
 d1=data.frame(Variable= c("ElderlyRate", "Region", "Specialist", "population", "Physician_rate", "Unemployment_rate_2018","Poverty", "Migration","Nurse"), p_value = c(7.072*10^(-7), 0.02471,0.02745, 0.01440, 0.04606, 0.04841, 0.02501, 0.00275, 0.01404))
 kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory Variables",linesep = "")%>%
   kable_styling(position = "center", full_width = FALSE,latex_options = "HOLD_position")%>%
@@ -79,6 +81,7 @@ kable(d1,align = "l",booktabs = T, caption = "P-values for Selected Explanatory 
 As shown above, all 9 of those explanatory variables are statistically significant; we then select the best model based on those 9 variables. Firstly, we will observe the correlation matrix and VIF of those variables to spot red flags for multicollinearity.
 
 ```{r, fig.pos="H"}
+# Find the correlation matrix and put it in the table 
 x<-data.frame(ElderlyRate, Specialist, Physician_rate, Unemployment_rate_2018, Poverty, Migration, Nurse)
 cor_matrix <- cor(x)
 output_matrix <- round(cor_matrix,3)
@@ -89,9 +92,9 @@ kable(output_matrix,align = "l",booktabs = T, caption = "Correlation Matrix",
   column_spec(5, width = "6em")%>%
   column_spec(7, width = "5em")%>%
   column_spec(4, width = "4em")
-
+# Fit the model with all the variable we found its statistically significant 
 fullmodel<-lm(Mortality ~ ElderlyRate + factor(Region) + Specialist + factor(population) + Physician_rate + Unemployment_rate_2018 + Poverty + Migration + Nurse)
-
+# Compute full model's corresponding VIF value and put it in the table
 vif_value <- vif(fullmodel)
 kable(vif_value,align = "l",booktabs = T, caption = "VIF Values")%>%
   kable_styling(position = "center", full_width = FALSE, latex_options = "HOLD_position")%>%
@@ -259,6 +262,7 @@ Based on the method we used and models we discussed, we select model1: Mortality
 # Assumption Checking 
 
 ```{r Plotmodel1, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
+# Plot the 2x2 diagnosis plot for modeling checking
 par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
