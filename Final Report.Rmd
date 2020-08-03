@@ -135,6 +135,7 @@ kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP v
   column_spec(1, width = "5em")
 
 ```
+<<<<<<< HEAD
 
 ```{r DigaCpPlot, include=FALSE}
 library(leaps)
@@ -144,6 +145,17 @@ b<-leaps(x=x, y=Covid19$Mortality, names=names(x))
 plot(b$size, b$Cp) 
 lines(b$size, b$size)
 ```
+||||||| 0cef170
+```{r DigaCpPlot, include=FALSE}
+library(leaps)
+library(tidyverse)
+Covid19 %>% dplyr::select(-Mortality,-Region,-population) -> x 
+b<-leaps(x=x, y=Covid19$Mortality, names=names(x))
+plot(b$size, b$Cp) 
+lines(b$size, b$size)
+```
+=======
+>>>>>>> 65c97de0473c1e9a4f2589ac73ab9dcc5671a760
 
 
 From the result, we noticed that models containing  at least five variables have a fair Cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
@@ -239,8 +251,7 @@ Based on the method we used and models we discussed, we select model1: Mortality
 
 # Assumption Checking 
 
-```{r model1, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
-summary(model1)
+```{r Plotmodel1, fig.cap= "\\label{fig:plot_full_model}Plot for Model Checking", fig.height = 10, fig.width = 10}
 par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
