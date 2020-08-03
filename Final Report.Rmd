@@ -31,8 +31,7 @@ The purpose of this study is to identify the factors that prominently affect the
 
 For the past 5 months, the Coronavirus (COVID-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the COVID-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the U.S. has a large number of confirmed cases (@coviddata), we would use the COVID-19 cases from the U.S. and the corresponding counties' data (@countydata) to analyze the causes of the mortality rate for this pandemic. 
 
-From our previous report, we have found some statistically significant variables to the mortality rate of COVID-19, which are region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation to search for reasonable factors that are statistically significant to the COVID-19 mortality rate. Based on all these results, we shall then conduct statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
-
+From our previous report (@371report1), we have found some statistically significant variables to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specially discovering in reasonable factors that are statistically significant to COVID-19 mortality rate. Based on all these results, we preform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
 
 # Dataset Description 
 
@@ -181,9 +180,9 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
-## Backward elimination procedure
-
 By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with the comparison between model1 and model3. 
+
+## Backward elimination procedure
 
 Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
 
@@ -248,23 +247,23 @@ par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
 
-## Mean of 0: 
+## Mean of 0 
 
 Looking at the plot of Residuals vs. Fitted values, the residuals do appear randomly scatter around the value 0, whereas there are some points far off (such as observation 99, 898 & 1114) the majority of the data points. However, the model overall appears to fairly satisfy the assumption of mean of 0.
 
-## Independence: 
+## Independence 
 
 The plot of Residuals vs. Fitted values shows that the residuals are randomly scattered with no apparent trend and thus the assumption of Independence is satisfied.
 
-## Constant Variance: 
+## Constant Variance 
 
 The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is one data point near the bottom left that has a smaller residual, the red line bulges up and down in the middle of the plot, causing a slightly increase and decrease in variability. However, the assumption of constant variance is still considered fairly satisfied.
 
-## Normality: 
+## Normality 
 
 The Q-Q plot overall appears adequate, as most of the residual points lay on a straight line. However, the normality assumption can only be considered as fairly satisfied, since there are points on the left tail that are below the line (such as observations 99, 898 & 1549), suggesting some potential outliers. 
 
-## Outliers:
+## Outliers
 
 As we discussed in the Q-Q plot above, there are some points off the straight on the left tail of the curve that appear to be outliers.
 
