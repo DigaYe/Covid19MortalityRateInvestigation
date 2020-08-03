@@ -29,7 +29,7 @@ The purpose of this study is to identify the factors that prominently affect the
 
 # Introduction
 
-For the past 5 months, the coronavirus (COVID-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the COVID-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the U.S. has a large number of confirmed cases (@coviddata), we would use the COVID-19 cases from the U.S. and the corresponding counties' data (@countydata) to analyze the causes of the mortality rate for this pandemic. 
+For the past 5 months, the Coronavirus (COVID-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the COVID-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the U.S. has a large number of confirmed cases (@coviddata), we would use the COVID-19 cases from the U.S. and the corresponding counties' data (@countydata) to analyze the causes of the mortality rate for this pandemic. 
 
 From our previous report, we have found some statistically significant variables to the mortality rate of COVID-19, which are region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation to search for reasonable factors that are statistically significant to the COVID-19 mortality rate. Based on all these results, we shall then conduct statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
 
@@ -108,7 +108,7 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 
 # Model Selection 
 ## Automatic model selection method
-To start our model selection process, we used the stepwise selection method first given the full model as the initial model to find the best model based on algorithm.
+To start our model selection process, we used the stepwise selection method first. Starting with the full model of all 9 variables, we begin the stepwise algorithm to find the best model.
 ```{r}
 step.model <- stepAIC(fullmodel, direction = "both",  trace = FALSE)
 summary(step.model)
@@ -142,7 +142,7 @@ kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP v
 ```
 
 
-From the result, we noticed that models containing  at least five variables have a fair Cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
+From the result, we noticed that models containing at least 4 variables have fair Cp values, whereas models contianing 3 variables or less have Cp values of at least 11, which is way above the acceptable range. In addition, the $R_{adj}^2$ value increases with the number of variables in the model. Hence, we only consider models of 4 variables and above, as listed below. 
 
 ```{r}
 model1 <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region))
@@ -183,7 +183,7 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
 
 ## Backward elimination procedure
 
-By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
+By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is nested in model3, and model2 is nested in model4, it is proper to use backward elimination procedure here. We start with the comparison between model1 and model3. 
 
 Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
 
@@ -201,7 +201,7 @@ Step 2: Repeat the procedure in step 1 with a simplified model excluding the Une
 
 ## Extra sum of squares principle
 
-Next, to compare model2 and model4, we use the extra sum of squares principle since model2 is nested within model4. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
+Next, we use the extra sum of squares principle to compare to compare betwene model2 and model4 since they have a nested relationship. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
 
 ```{r}
 summary(model2)
@@ -222,11 +222,11 @@ Hypothesis test:
 
 (4) Since p-value > $\alpha = 0.05$, then we do not reject $H_0$ at a 5% level of significance, which suggests the addition variable Unemployment_rate_2018 is not useful.
 
-Thus we choose model2 as one of our best models to consider.
+Thus, we choose model2 above model4.
 
 ## Log of Mortality Rate including interaction term
 
-Then, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity of these two variables.
+Then, we compare the results from model1 and model2. Notice that model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity between Specialist and Migration since they have a correlation coefficient of 0.855.
 
 ```{r model_int}
 model_int <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region) + Specialist * Migration)
@@ -234,9 +234,9 @@ summary(model_int)
 anova(model_int)
 ```
 
-The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 which is lower than 0.0218 from model1, which means the model that includes the interaction term explains less variability. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Besides, the global F-statistic = 6.463 which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to stay with model1. 
+Observe the above summary with the addition of interaction term between Specialist and Migration. The overall p-value = 1.548e-07 < $\alpha = 0.05$, which is higher that the model1. The adjusted $R^2$ = 0.02163 is lower than 0.0218 from model1, meaning that the model with the interaction term explains less variability of the response variable. Besides, the p-values for Migration increases to 0.2797 > $\alpha = 0.05$ which do not indicate statistically significant. Moreover, the global F-statistic = 6.463, which is lower than 7.425 from model1. Thus, adding the interaction term does not contribute to our study, and we decide to keep model1. 
 
-We notice from previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value more than 50, and Migration has a VIF value of 5 indicating multicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model, and will need to investigate on this using a larger dataset.
+We notice from previous analysis that Specialist and Migration have a correlation of 0.855, which shows they are highly correlated. Also, Specialist has a VIF value more than 50, and Migration has a VIF value of 5 indicating multicollinearity issue between these two variables. However, for the current dataset, we choose to stay with model1 as our best model, and will need to investigate on this multicollinearity issue using a larger dataset.
 
 Based on the method we used and models we discussed, we select model1: Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as the most suitable model for the given COVID-19 dataset.
 
@@ -250,29 +250,29 @@ plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 
 ## Mean of 0: 
 
-Looking at the plot of Residuals vs. Fitted values the residuals do appear randomly scatter around the value 0, whereas there are some points are far away (such as observation 99, 898 & 1114) from the majority which results the mean scatter around 0. However, overall it appears to fairly satisfy the assumption of mean of 0.
+Looking at the plot of Residuals vs. Fitted values, the residuals do appear randomly scatter around the value 0, whereas there are some points far off (such as observation 99, 898 & 1114) the majority of the data points. However, the model overall appears to fairly satisfy the assumption of mean of 0.
 
 ## Independence: 
 
-Again the plot of Residuals vs. Fitted values shows the residuals randomly scattered with no apparent trend and thus satisfied.
+The plot of Residuals vs. Fitted values shows that the residuals are randomly scattered with no apparent trend and thus the assumption of Independence is satisfied.
 
 ## Constant Variance: 
 
-The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is a few larger residuals at the bottom and on the left hand side, the red line bulges up and down in the middle of the plot, causing a slightly increase and decrease in variability. However, in general, it is still considered fairly satisfied.
+The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is one data point near the bottom left that has a smaller residual, the red line bulges up and down in the middle of the plot, causing a slightly increase and decrease in variability. However, the assumption of constant variance is still considered fairly satisfied.
 
 ## Normality: 
 
-The Q-Q plot overall appears good, since most of the residuals are lying on a straight line. However, the normality assumption can only be considered as fairly satisfied, since there are some points at the tails are off the line (such as observation 99, 898 & 1549), suggesting some potential outliers. 
+The Q-Q plot overall appears adequate, as most of the residual points lay on a straight line. However, the normality assumption can only be considered as fairly satisfied, since there are points on the left tail that are below the line (such as observations 99, 898 & 1549), suggesting some potential outliers. 
 
 ## Outliers:
 
-It could be seen that there are some potential outliers, as we could find that there are some points off the straight at the tails in Q-Q plot, which appears to be outliers. 
+As we discussed in the Q-Q plot above, there are some points off the straight on the left tail of the curve that appear to be outliers.
 
-In terms of the leverage and Standard Residual plot, it could seen that there is a point on the very right side and a few other points are far away compared to the rest of majority of observations (observations that are greater than the leverage 0.1). As such, those points are considered to have a high leverage, whereas they are all within the Cook's Distance. Thus, these points are considered not to be influential. 
+Observe the leverage and Standard Residual plot. There is a point on the right end of the plot and a few other points, including data point 393 and 1284, that are far away from the majority of observations (observations that are greater than the leverage 0.1). As such, those points are considered to have a high leverage, whereas they are all within the Cook's Distance. Hence, these points are not considered to be influential. 
 
 # Results
 
-We found that Elderly rate, number of Specialists, number of International migrations, and Region are four variables that have major impacts on COVID-19 mortality rate given the dataset. This result matches with our initial speculation. Based on above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Furthermore, the best linear model fitting for these variables is $Mortality = -3.700e+00 + (2.699e+00)x_{ElderlyRate} + (3.641e-05)x_{Specialist} - (2.297e-05 )x_{Migration} - (8.959e-02)x_{Northeast} - (1.422e-01)x{South} - (2.641e-01)x_{West}$. However, there can several limitations of this study and will be discussed below. 
+We found that Elderly rate, number of Specialists, number of International migrations, and Region are four variables that have major impacts on COVID-19 mortality rate given the dataset. This result matches with our initial speculation. Based on the above discussion, the final model is selected to be Mortality ~ ElderlyRate + Specialist + Migration + factor(Region) as it has high $R^2_{adj}$ compared to other models and is overall statistically significant. Besides, the hypothesis tests for individual variables indicate statistical significance. Furthermore, the best linear model fitting for these variables is $Mortality = -3.7 + (2.699)x_{ElderlyRate} + (3.641\times 10^{-5})x_{Specialist} - (2.297\times 10^{-5})x_{Migration} - (8.959\times 10^{-2})x_{Northeast} - (0.1422)x_{South} - (0.2641x_{West}$. However, there can several limitations of this study and will be discussed below. 
 
 # Limitation and Conclusion
 
