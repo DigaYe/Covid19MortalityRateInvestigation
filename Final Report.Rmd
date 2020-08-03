@@ -6,7 +6,7 @@ output:
     toc: true
     toc_depth: 2
   word_document: default
-fontsize: 15 pt
+fontsize: 12pt
 header-includes:
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
