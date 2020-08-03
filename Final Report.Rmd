@@ -12,6 +12,7 @@ header-includes:
 - \pagestyle{fancy}
 - \fancyhead[R]{Group 1}
 - \usepackage{float}
+
 bibliography: thebib.bib
 ---
 
@@ -120,7 +121,8 @@ The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + 
 ## Model selection process   
 In order to find the best fitting model, we performed another model selection process by fitting all possible combinations.
 
-```{r}
+
+```{r, fig.pos="H"}
 f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
 e <- summary(f)
 attach(e)
@@ -142,6 +144,7 @@ kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP v
 
 From the result, we noticed that models containing  at least five variables have a fair Cp value and as the number of variables increases the $R_{adj}^2$ increases. Then, we consider the following models:
 
+<<<<<<< HEAD
 
 
 ```{r}
@@ -163,12 +166,15 @@ A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,
 B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
 
 d2=data.frame(Model= c(1, 2, 3, 4, 5, 6,7, 8,9,10,11,12), Regression_Equation = c("Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region", "Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population"))
+```
+
+```{r, fig.pos="H"}
 kable(d2,align = "l",booktabs = T, caption = "Automatic Selection Model Summary")%>%
   kable_styling(position = "center", full_width = TRUE, latex_options = "hold_position")%>%
   column_spec(1, width = "5em")%>%
   row_spec(1:12, hline_after = TRUE)
-```
 
+```
 
 
 ```{r AIC&BIC}
