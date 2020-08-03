@@ -280,7 +280,7 @@ Even though we have considered model 1:  Mortality ~ ElderlyRate + Specialist + 
 
 Secondly, multicollinearity issue is presented, which not only undermines the statistical significance of an independent variable, but also violates our model independence assumption. For instance, the correlation between Specialist & Migration is as high as 0.855, highlighting a strong positive linear association in this pair variable. In addition, a very high VIF value (50.404208) of Specialist, suggesting that the association will affect the standard errors. Since the multicollinearity issue is considered very severe in this case, we would need to do further investigation and study about the cause of this issue. The solution for this problem varies by situation. If it is structural multicollinearity, centering the variables could be helpful. (@multi). Another potential solution could be linearly combining the independent variables together into higher power variables. Any of these solutions discussed above would require further study, since they can be difficult and time-consuming to implement. 
 
-In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have statistically significant effect on Morality. This model does the best job at representing the US mortality rate of COVID-19 at this stage of the study.
+In conclusion, the selected model consists of 4 explanatory variables: ElderlyRate, Specialist, Migration, Region, all of which have statistically significant effect on Morality. This model does the best job at representing the U.S. mortality rate of COVID-19 at this stage of the study.
 
 \pagebreak
 
