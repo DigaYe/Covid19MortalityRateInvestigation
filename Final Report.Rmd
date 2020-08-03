@@ -31,7 +31,7 @@ The purpose of this study is to identify the factors that prominently affect the
 
 For the past 5 months, the coronavirus (COVID-19) pandemic has been raging all over the world. According to the World Health Organization, there are more than 9.44 million confirmed cases worldwide, and the total number of death cases is as high as 483,000 (@who2020). Therefore, we are interested in finding the factors that can potentially explain the COVID-19 mortality rate, as well as the degree to which those factors impact the mortality rate. Since the US has a large number of confirmed cases (@coviddata), we would use the COVID-19 cases from US and its corresponding counties' data (@countydata) to analyze the causes of mortality rate of this pandemic. 
 
-From our previous report (@371report), we have found that there are some factors that presented statistically significant to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specially discovering in reasonable factors that are statistically significant to COVID-19 mortality rate. Based on all these results, we preform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
+From our previous report (@371report1), we have found that there are some factors that presented statistically significant to the mortality rate of COVID-19, which are the factors of region, percentage of elder population, specialists and physicians. Thus, in this report, we would first extend our investigation, specially discovering in reasonable factors that are statistically significant to COVID-19 mortality rate. Based on all these results, we preform statistical analysis in comparing and fitting different models. Ultimately, we wish to gain some important insights from the mortality rate of COVID-19 by finding the best statistical significant model. 
 
 # Dataset Description 
 
@@ -242,23 +242,23 @@ par(mfrow = c(2, 2))
 plot(model1,cex.lab=1.1, cex.axis=1.1, cex.main=1, cex.sub=0.8)
 ```
 
-## Mean of 0: 
+## Mean of 0 
 
 Looking at the plot of Residuals vs. Fitted values the residuals do appear randomly scatter around the value 0, whereas there are some points are far away (such as observation 99, 898 & 1114) from the majority which results the mean scatter around 0. However, overall it appears to fairly satisfy the assumption of mean of 0.
 
-## Independence: 
+## Independence 
 
 Again the plot of Residuals vs. Fitted values shows the residuals randomly scattered with no apparent trend and thus satisfied.
 
-## Constant Variance: 
+## Constant Variance 
 
 The scale location plot suggests that the majority of residuals are randomly scattered within an upper and lower band around the value 0, which suggests a constant variance. However, since there is a few larger residuals at the bottom and on the left hand side, the red line bulges up and down in the middle of the plot, causing a slightly increase and decrease in variability. However, in general, it is still considered fairly satisfied.
 
-## Normality: 
+## Normality 
 
 The Q-Q plot overall appears good, since most of the residuals are lying on a straight line. However, the normality assumption can only be considered as fairly satisfied, since there are some points at the tails are off the line (such as observation 99, 898 & 1549), suggesting some potential outliers. 
 
-## Outliers:
+## Outliers
 
 It could be seen that there are some potential outliers, as we could find that there are some points off the straight at the tails in Q-Q plot, which appears to be outliers. 
 
