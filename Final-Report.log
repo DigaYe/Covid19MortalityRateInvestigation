@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,43 +864,43 @@ fier (name{table.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 \end{verbatim}
-                    ] [6pdfTeX warning (ext4): destination with the same identi
-fier (name{table.5}) has been already used, duplicate ignored
+l.388 
+      ] [6pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.430 
+      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.493 \end{verbatim}
                     pdfTeX warning (ext4): destination with the same identifier
- (name{table.6}) has been already used, duplicate ignored
+ (name{table.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.493 \end{verbatim}
-                    ] [7pdfTeX warning (ext4): destination with the same identi
-fier (name{table.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.526 \end{verbatim}
-                    ] [8] [9]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=111, 710.655pt x 676.5275
+                    ] [8] [9] [10]
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=115, 710.655pt x 676.5275
 pt>
 File: Final-Report_files/figure-latex/Plotmodel1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/Plotmodel1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/Plotmodel1-1.pdf  used
  on input line 703.
 (pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
-[10] [11pdfTeX warning (ext4): destination with the same identifier (name{figur
+[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.741 
-       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [12] [13] [14] [15
-] [16] [17]
+l.755 
+       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
+] [17] [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1037.
-[18]
+[19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1037.
 (./Final-Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1037.
@@ -911,10 +911,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1037.
  ) 
 Here is how much of TeX's memory you used:
- 14434 strings out of 492649
- 209115 string characters out of 6129622
- 352850 words of memory out of 5000000
- 17922 multiletter control sequences out of 15000+600000
+ 14436 strings out of 492649
+ 209131 string characters out of 6129622
+ 341850 words of memory out of 5000000
+ 17923 multiletter control sequences out of 15000+600000
  41798 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,16n,43p,474b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -931,10 +931,10 @@ ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
 pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (18 pages, 643998 bytes).
+Output written on Final-Report.pdf (19 pages, 642970 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
  8350 words of extra memory for PDF output out of 10000 (max. 10000000)
 
