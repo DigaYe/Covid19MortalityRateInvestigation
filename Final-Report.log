@@ -1,63 +1,9 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 22:14
-||||||| merged common ancestors
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 21:47
-||||||| merged common ancestors
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 21:27
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 21:47
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  2 AUG 2020 22:20
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Final-Report.tex
 (./Final-Report.tex
-<<<<<<< HEAD
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-07-17> (/Users/diga/Library/TinyTeX/texmf-dist/tex/l
-atex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
-)
-\c@part=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
-) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
-||||||| merged common ancestors
-<<<<<<< HEAD
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-07-17> (/Users/diga/Library/TinyTeX/texmf-dist/tex/l
-atex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
-)
-\c@part=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
-) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
-||||||| merged common ancestors
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-07-17> (/Users/diga/Library/TinyTeX/texmf-dist/tex/l
 atex/base/article.cls
@@ -77,48 +23,6 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 ) (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
-=======
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
-)
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/lmodern.sty
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
-)
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/lmodern.sty
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -548,7 +452,6 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen191
 \c@nlinenum=\count287
 \TeXr@lab=\toks34
-<<<<<<< HEAD
 )
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
 ef
@@ -556,210 +459,46 @@ File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count288
 \l__pdf_internal_box=\box65
 ) (./Final-Report.aux
-||||||| merged common ancestors
-)
-<<<<<<< HEAD
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
-ef
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count288
-\l__pdf_internal_box=\box65
-) (./Final-Report.aux)
-||||||| merged common ancestors
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.d
-ef
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count288
-\l__pdf_internal_box=\box65
-)
-
-LaTeX Warning: Unused global option(s):
-    [15pt].
-
-(./Final-Report.aux)
-=======
-
-LaTeX Warning: Unused global option(s):
-    [15pt].
-
-(./Final-Report.aux
-=======
-) (./Final-Report.aux
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 
 LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
 
 )
 \openout1 = `Final-Report.aux'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
-y
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-||||||| merged common ancestors
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 83.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Info: Redefining \microtypecontext on input line 83.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using protrusion set `basicmath'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen161
-\scratchbox=\box46
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen162
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks36
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-=======
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 82.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 82.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Info: Redefining \microtypecontext on input line 82.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using protrusion set `basicmath'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen161
-\scratchbox=\box46
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen162
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks36
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+
+(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<<<<<<< HEAD
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 82.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-||||||| merged common ancestors
-\AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 83.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
-=======
-\AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 82.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 )
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestri
 ng.sty
@@ -767,23 +506,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count289
 )
-<<<<<<< HEAD
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 (./Final-Report.out) (./Final-Report.out)
 \@outlinefile=\write3
 \openout3 = `Final-Report.out'.
 
-||||||| merged common ancestors
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
-=======
-LaTeX Info: Redefining \ref on input line 82.
-LaTeX Info: Redefining \pageref on input line 82.
-LaTeX Info: Redefining \nameref on input line 82.
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -844,29 +573,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-<<<<<<< HEAD
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-||||||| merged common ancestors
-<<<<<<< HEAD
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-(/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-||||||| merged common ancestors
 (Font)              <5> on input line 6.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-=======
-(Font)              <5> on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-(Font)              <5> on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
@@ -876,882 +585,123 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `Final-Report.toc'.
 
-<<<<<<< HEAD
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
 [1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-||||||| merged common ancestors
-<<<<<<< HEAD
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 14.49998pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-||||||| merged common ancestors
-[1{/Users/diga/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-=======
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 
 ] [2]
-<<<<<<< HEAD
-Underfull \hbox (badness 3724) in paragraph at lines 170--179
-\T1/lmr/m/n/12 in-clud-ing Spe-cial-ist, Physi-cian_rate, El-der-lyRate, Re-gio
-n, Pop-u-la-tion, Un-em-ploy-
-||||||| merged common ancestors
-<<<<<<< HEAD
-Underfull \hbox (badness 3724) in paragraph at lines 169--178
-\T1/lmr/m/n/12 in-clud-ing Spe-cial-ist, Physi-cian_rate, El-der-lyRate, Re-gio
-n, Pop-u-la-tion, Un-em-ploy-
-||||||| merged common ancestors
-Overfull \hbox (5.61691pt too wide) in paragraph at lines 226--226
+Overfull \hbox (5.61691pt too wide) in paragraph at lines 228--228
 []\T1/lmr/m/n/10 Elderly|  
-=======
-Overfull \hbox (4.9858pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Elderly|  
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-Overfull \hbox (4.9858pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Elderly|  
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
  []
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-as been already used, duplicate ignored
 
-<<<<<<< HEAD
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.209 
-      ]
-Overfull \hbox (22.91591pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Elderly|  
-||||||| merged common ancestors
-<<<<<<< HEAD
-Overfull \hbox (22.91591pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Elderly|  
-||||||| merged common ancestors
-Overfull \hbox (10.5058pt too wide) in paragraph at lines 226--226
+Overfull \hbox (10.5058pt too wide) in paragraph at lines 228--228
 []\T1/lmr/m/n/10 Specilist|  
-=======
-Overfull \hbox (9.78247pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Specilist|  
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-Overfull \hbox (9.78247pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Specilist|  
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (28.69492pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Specilist|  
-||||||| merged common ancestors
-<<<<<<< HEAD
-Overfull \hbox (28.69492pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Specilist|  
-||||||| merged common ancestors
-Overfull \hbox (1.86119pt too wide) in paragraph at lines 226--226
+Overfull \hbox (1.86119pt too wide) in paragraph at lines 228--228
 []\T1/lmr/m/n/10 Physician|  
-=======
-Overfull \hbox (1.0184pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Physician|  
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-Overfull \hbox (1.0184pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Physician|  
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (2.18588pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Physician|  
-||||||| merged common ancestors
-<<<<<<< HEAD
-Overfull \hbox (2.18588pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Physician|  
-||||||| merged common ancestors
-Overfull \hbox (6.11066pt too wide) in paragraph at lines 226--226
+Overfull \hbox (6.11066pt too wide) in paragraph at lines 228--228
 []\T1/lmr/m/n/10 Unemployment|  
-=======
-Overfull \hbox (4.77734pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Unemployment|  
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-Overfull \hbox (4.77734pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Unemployment|  
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (7.17796pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Unemployment|  
- []
-
-
-Overfull \hbox (25.20016pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Poverty|  
- []
-
-
-Overfull \hbox (15.63458pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 Nurse|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.389|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.371|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.391|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.389|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.958|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.983|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.026|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.127|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.041|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.106|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.130|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.049|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.026|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.055|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.371|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.958|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.939|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.266|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.855|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.835|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.883|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-\T1/lmr/m/n/12 0.391|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.983|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 0.939|  
-||||||| merged common ancestors
-<<<<<<< HEAD
-Overfull \hbox (7.17796pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Unemployment|  
-||||||| merged common ancestors
-Overfull \hbox (7.56175pt too wide) in paragraph at lines 226--226
+Overfull \hbox (7.56175pt too wide) in paragraph at lines 228--228
 []\T1/lmr/m/n/10 Poverty|  
-=======
-Overfull \hbox (6.86952pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Poverty|  
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
  []
 
-<<<<<<< HEAD
-
-Overfull \hbox (25.20016pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Poverty|  
- []
-
-
-Overfull \hbox (15.63458pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 Nurse|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.389|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.371|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.391|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.389|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.958|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.983|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.026|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.127|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.041|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.106|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.130|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.049|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.026|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.055|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.371|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.958|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.939|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.266|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.855|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.835|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.883|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-\T1/lmr/m/n/12 0.391|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.983|  
- []
-
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 0.939|  
-=======
-Overfull \hbox (6.86952pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/10 (-20) Poverty|  
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
- []
-
-<<<<<<< HEAD
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 227--227
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
-||||||| merged common ancestors
-
-Overfull \hbox (12.63654pt too wide) in paragraph at lines 226--226
-[]\T1/lmr/m/n/12 1.000|  
- []
-
-||||||| merged common ancestors
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-=======
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
 [3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-=======
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-<<<<<<< HEAD
-l.271 \begin{verbatim}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{table.3}) has been already used, duplicate ignored
-||||||| merged common ancestors
-<<<<<<< HEAD
-l.227 \end{table}
-                 ] [4pdfTeX warning (ext4): destination with the same identifie
-r (name{table.2}) has been already used, duplicate ignored
+l.252 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.270 \begin{verbatim}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{table.3}) has been already used, duplicate ignored
-||||||| merged common ancestors
-l.270 \begin{verbatim}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{table.2}) has been already used, duplicate ignored
-=======
-l.250 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.2
-}) has been already used, duplicate ignored
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-l.250 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.2
-}) has been already used, duplicate ignored
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.271 \begin{verbatim}
-                      ]
+l.252 
+      ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-71.
+72.
 (/Users/diga/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-<<<<<<< HEAD
-)
-Overfull \hbox (18.07022pt too wide) in paragraph at lines 320--320
-[]\T1/lmtt/m/n/12 ## Mortality ~ ElderlyRate + factor(Region) + Specialist + fa
-ctor(population) +[] 
- []
-
-[5]
-Overfull \hbox (45.35191pt too wide) in paragraph at lines 341--351
- [][] 
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
-as been already used, duplicate ignored
-||||||| merged common ancestors
-<<<<<<< HEAD
-)
-Overfull \hbox (18.07022pt too wide) in paragraph at lines 319--319
-[]\T1/lmtt/m/n/12 ## Mortality ~ ElderlyRate + factor(Region) + Specialist + fa
-ctor(population) +[] 
- []
-
-[5]
-Overfull \hbox (45.35191pt too wide) in paragraph at lines 340--350
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
-as been already used, duplicate ignored
-||||||| merged common ancestors
 ) [4pdfTeX warning (ext4): destination with the same identifier (name{table.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.319 \end{verbatim}
-                    ]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 462--465
-[]\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
-e-cial-ist + Mi-gra-tion + Un-em-ploy-
- []
-
-[5pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
-as been already used, duplicate ignored
-=======
-)
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 298
-.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4pdfTeX warning (ext4): destination with the same identifier (name{table.3})
- has been already used, duplicate ignored
-=======
-)
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 298
-.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4pdfTeX warning (ext4): destination with the same identifier (name{table.3})
- has been already used, duplicate ignored
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<<<<<<< HEAD
-l.389 
-      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
-||||||| merged common ancestors
-l.298 \end{verbatim}
-                    ] [5pdfTeX warning (ext4): destination with the same identi
-fier (name{table.4}) has been already used, duplicate ignored
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<<<<<<< HEAD
-l.495 \end{verbatim}
-                    ] [7pdfTeX warning (ext4): destination with the same identi
-fier (name{table.5}) has been already used, duplicate ignored
-||||||| merged common ancestors
-l.493 \end{verbatim}
-                    ] [6pdfTeX warning (ext4): destination with the same identi
-fier (name{table.5}) has been already used, duplicate ignored
-=======
-l.388 
-      ] [6pdfTeX warning (ext4): destination with the same identifier (name{tab
-=======
-l.298 \end{verbatim}
+l.300 \end{verbatim}
                     ] [5pdfTeX warning (ext4): destination with the same identi
 fier (name{table.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.389 
+l.391 
       ] [6pdfTeX warning (ext4): destination with the same identifier (name{tab
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 le.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-<<<<<<< HEAD
-l.431 
-      ] [8pdfTeX warning (ext4): destination with the same identifier (name{tab
-||||||| merged common ancestors
-<<<<<<< HEAD
-l.495 \end{verbatim}
-                    ] [8pdfTeX warning (ext4): destination with the same identi
-fier (name{table.6}) has been already used, duplicate ignored
-||||||| merged common ancestors
-l.526 \end{verbatim}
-                    ] [7pdfTeX warning (ext4): destination with the same identi
-fier (name{table.6}) has been already used, duplicate ignored
-=======
-l.430 
-      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
-=======
-l.431 
-      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
-le.6}) has been already used, duplicate ignored
+l.433 
+      ]
+Underfull \hbox (badness 1158) in paragraph at lines 472--475
+[]\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
+e-cial-ist + Mi-gra-tion + Un-em-ploy-
+ []
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{table.6}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-<<<<<<< HEAD
-l.457 
-      ] [9pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.7}) has been already used, duplicate ignored
-||||||| merged common ancestors
-<<<<<<< HEAD
-l.528 \end{verbatim}
-                    ] [9pdfTeX warning (ext4): destination with the same identi
-fier (name{table.7}) has been already used, duplicate ignored
-||||||| merged common ancestors
-l.526 \end{verbatim}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.7}) has been already used, duplicate ignored
-=======
-l.493 \end{verbatim}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.7}) has been already used, duplicate ignored
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-l.473 
+l.475 
       pdfTeX warning (ext4): destination with the same identifier (name{table.7
 }) has been already used, duplicate ignored
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-<<<<<<< HEAD
-l.494 \end{verbatim}
-                    ] [10]
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 568--568
-[]\T1/lmtt/m/n/12 ## lm(formula = Mortality ~ ElderlyRate + Nurse + Migration +
- factor(Region))[] 
- []
-
-
-Overfull \hbox (61.29524pt too wide) in paragraph at lines 597--597
-[]\T1/lmtt/m/n/12 ## lm(formula = Mortality ~ ElderlyRate + Nurse + Migration +
- Unemployment_rate_2018 +[] 
- []
-
-[11] [12]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=174, 722.7pt x 722.7pt>
-||||||| merged common ancestors
-<<<<<<< HEAD
-l.539 
-      ]
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 569--569
-[]\T1/lmtt/m/n/12 ## lm(formula = Mortality ~ ElderlyRate + Nurse + Migration +
- factor(Region))[] 
- []
-
-
-Overfull \hbox (61.29524pt too wide) in paragraph at lines 598--598
-[]\T1/lmtt/m/n/12 ## lm(formula = Mortality ~ ElderlyRate + Nurse + Migration +
- Unemployment_rate_2018 +[] 
- []
-
-[10] [11] [12]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=179, 722.7pt x 722.7pt>
-||||||| merged common ancestors
-l.526 \end{verbatim}
-                    ] [8] [9]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=168, 722.7pt x 722.7pt>
-=======
-l.493 \end{verbatim}
-                    ] [8] [9] [10]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=115, 710.655pt x 676.5275
-pt>
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-l.473 
+l.475 
       ] [8] [9] [10]
-<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=122, 710.655pt x 676.5275
-pt>
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+<Final-Report_files/figure-latex/Plotmodel1-1.pdf, id=185, 722.7pt x 722.7pt>
 File: Final-Report_files/figure-latex/Plotmodel1-1.pdf Graphic file (type pdf)
 <use Final-Report_files/figure-latex/Plotmodel1-1.pdf>
 Package pdftex.def Info: Final-Report_files/figure-latex/Plotmodel1-1.pdf  used
-<<<<<<< HEAD
- on input line 704.
+ on input line 721.
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
-[13] [14] [15pdfTeX warning (ext4): destination with the same identifier (name{
-figure.1}) has been already used, duplicate ignored
-||||||| merged common ancestors
-<<<<<<< HEAD
- on input line 705.
-(pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
-[13] [14pdfTeX warning (ext4): destination with the same identifier (name{figur
-||||||| merged common ancestors
- on input line 703.
-(pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
-[10] [11pdfTeX warning (ext4): destination with the same identifier (name{figur
-=======
- on input line 703.
-(pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
-[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-e.1}) has been already used, duplicate ignored
-=======
- on input line 719.
-(pdftex.def)             Requested size: 469.77112pt x 447.21149pt.
 [11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.1}) has been already used, duplicate ignored
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-<<<<<<< HEAD
-l.773 
-       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [16] [17] [18] [19
-] [20] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1048.
-[22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1048.
-||||||| merged common ancestors
-<<<<<<< HEAD
-l.759 \section{Results}\label{results}}
-                                        <./Final-Report_files/figure-latex/Plot
-model1-1.pdf>] [15] [16] [17] [18] [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1039.
-[21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1039.
-||||||| merged common ancestors
-l.723 ...tant Variance:}\label{constant-variance}}
-                                                   <./Final-Report_files/figure
--latex/Plotmodel1-1.pdf>] [12] [13] [14] [15] [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1037.
-[19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1037.
-=======
-l.755 
+l.750 
        <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
-] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1037.
-[19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1037.
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-l.757 
-       <./Final-Report_files/figure-latex/Plotmodel1-1.pdf>] [13] [14] [15] [16
-] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1058.
-[19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1058.
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+] [17] [18] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1065.
+[20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1065.
 (./Final-Report.aux)
-<<<<<<< HEAD
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1048.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1048.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1065.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1065.
 
 Package rerunfilecheck Info: File `Final-Report.out' has not changed.
-(rerunfilecheck)             Checksum: DECD496BB28AAD46247E58456F9599D6;2181.
-||||||| merged common ancestors
-<<<<<<< HEAD
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1039.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1039.
-||||||| merged common ancestors
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1037.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1037.
-=======
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1037.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1037.
-=======
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1058.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1058.
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+(rerunfilecheck)             Checksum: 1E014442337BC48A417FA0D92746C29B;3098.
 
 LaTeX Warning: There were multiply-defined labels.
 
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1048.
-||||||| merged common ancestors
-<<<<<<< HEAD
-Package rerunfilecheck Info: File `Final-Report.out' has not changed.
-(rerunfilecheck)             Checksum: 8981966D5966D9DBC299617C3A3D41E4;2270.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1039.
-||||||| merged common ancestors
-Package rerunfilecheck Info: File `Final-Report.out' has not changed.
-(rerunfilecheck)             Checksum: 8981966D5966D9DBC299617C3A3D41E4;2270.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1037.
-=======
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1037.
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1058.
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1065.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 12177 strings out of 482854
- 172328 string characters out of 5956102
- 445752 words of memory out of 5000000
- 27209 multiletter control sequences out of 15000+600000
- 569107 words of font info for 55 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 43i,15n,45p,288b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
-ers/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/diga/L
-ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
-yTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</Users/diga/Library/TinyTeX/t
-exmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/diga/Library/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmmi12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fo
-nts/type1/public/lm/lmmi8.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmr12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr8.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
-ro12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.p
-fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Us
-ers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Final-Report.pdf (22 pages, 611551 bytes).
-||||||| merged common ancestors
-<<<<<<< HEAD
- 12179 strings out of 482854
- 172349 string characters out of 5956102
- 454785 words of memory out of 5000000
- 27211 multiletter control sequences out of 15000+600000
- 569107 words of font info for 55 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 43i,15n,45p,288b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
-ers/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/diga/L
-ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
-yTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</Users/diga/Library/TinyTeX/t
-exmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/diga/Library/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmmi12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fo
-nts/type1/public/lm/lmmi8.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmr12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr8.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
-ro12.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.p
-fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Us
-ers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Final-Report.pdf (21 pages, 612035 bytes).
-||||||| merged common ancestors
- 12180 strings out of 482854
- 172341 string characters out of 5956102
- 455768 words of memory out of 5000000
- 27212 multiletter control sequences out of 15000+600000
+ 12189 strings out of 482854
+ 172687 string characters out of 5956102
+ 446861 words of memory out of 5000000
+ 27215 multiletter control sequences out of 15000+600000
  568772 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,15n,45p,288b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,15n,45p,397b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Us
 ers/diga/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/diga/L
 ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/diga/Library/Tin
@@ -1765,80 +715,10 @@ lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
 fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
 sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
 ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (19 pages, 641612 bytes).
-=======
- 14437 strings out of 492649
- 209134 string characters out of 6129622
- 342883 words of memory out of 5000000
- 17924 multiletter control sequences out of 15000+600000
- 41798 words of font info for 81 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 40i,16n,43p,474b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2
-018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist
-/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
-ps/lm/lm-mathit.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/l
-mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (19 pages, 643055 bytes).
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
- 14448 strings out of 492649
- 209480 string characters out of 6129622
- 343144 words of memory out of 5000000
- 17927 multiletter control sequences out of 15000+600000
- 41964 words of font info for 83 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 40i,16n,43p,712b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2
-018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist
-/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
-ps/lm/lm-mathit.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/l
-mbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/public/lm/lmro10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (19 pages, 648485 bytes).
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+Output written on Final-Report.pdf (20 pages, 646358 bytes).
 PDF statistics:
-<<<<<<< HEAD
- 301 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
-||||||| merged common ancestors
-<<<<<<< HEAD
- 300 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
-||||||| merged common ancestors
- 297 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 302 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
- 8350 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> a81585cc9d58670d957c4a1fd6f19d55272f8801
-=======
- 315 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 80 named destinations out of 1000 (max. 500000)
- 8366 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> b59af726b704d26c30c730cc1fdb1760ed0f0420
+ 317 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
