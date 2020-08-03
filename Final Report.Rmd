@@ -116,7 +116,9 @@ step.model$anova
 
 The stepwise method gives the model: Mortality ~ ElderlyRate + factor(Region) + Specialist + Physician_rate + Unemployment_rate_2018 + Migration) as the final model. However, we noticed the p-value for Physician_rate = 0.13894 > $\alpha = 0.05$ and the p-value for Unemployment_rate_2018 = 0.09422 > $\alpha = 0.05$, which do not indicate statistical significance. Thus, the model is not the most suitable model for our dataset.
 
-## Model selection process   
+## Model selection process
+### All possible combinations
+
 In order to find the best fitting model, we performed another model selection process by fitting all possible combinations.
 
 
@@ -179,7 +181,7 @@ kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   column_spec(1, width = "5em")
 ```
 
-
+### Backward elimination procedure
 
 By comparing this result, we notice that model1, model2, model3, and model4 have the lowest AIC and BIC values. Since model1 is included in model3, and model2 is included in model4. First, to compare model1 and model3, we use backward elimination procedure. 
 
@@ -196,6 +198,8 @@ summary(model1)
 ```
 
 Step 2: Repeat the procedure in step 1 with a simplified model excluding the Unemployment_rate_2018, which is the our model1. The p-value for ElderlyRate = 4.33e-07 < $\alpha = 0.05$,the p-value for Specialist = 0.02241 < $\alpha = 0.05$, p-value for Migration = 0.00516 < $\alpha = 0.05$, and the p-values for most categories under Region are under $\alpha = 0.05$. This suggests that all variables inside this model are statistically significant. Thus we cannot further simplify this model and this model would be one of our best models to consider.
+
+### Extra sum of squares principle
 
 Next, to compare model2 and model4, we use the extra sum of squares principle since model2 is nested within model4. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
 
@@ -219,6 +223,8 @@ Hypothesis test:
 (4) Since p-value > $\alpha = 0.05$, then we do not reject $H_0$ at a 5% level of significance, which suggests the addition variable Unemployment_rate_2018 is not useful.
 
 Thus we choose model2 as one of our best models to consider.
+
+### Log of Mortality Rate including interaction term
 
 Then, we compare model1 and model2 results. We notice model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity of these two variables.
 
