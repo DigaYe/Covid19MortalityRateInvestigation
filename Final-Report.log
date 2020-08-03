@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.25)  2 AUG 2020 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,19 +461,9 @@ File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 )
 
 LaTeX Warning: Unused global option(s):
-    [10.5pt].
+    [15pt].
 
-(./Final-Report.aux
-
-LaTeX Warning: Label `tab:unnamed-chunk-3' multiply defined.
-
-
-LaTeX Warning: Label `tab:unnamed-chunk-5' multiply defined.
-
-
-LaTeX Warning: Label `tab:unnamed-chunk-6' multiply defined.
-
-)
+(./Final-Report.aux)
 \openout1 = `Final-Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -623,6 +613,9 @@ Overfull \hbox (7.56175pt too wide) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 Poverty|  
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 
@@ -647,6 +640,16 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
                                                   \fi \fi 
 l.319 \end{verbatim}
                     ]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 1158) in paragraph at lines 462--465
 []\T1/lmr/m/n/10 Step 1: start by fit-ting Model3: Mor-tal-ity~ElderlyRate + Sp
 e-cial-ist + Mi-gra-tion + Un-em-ploy-
@@ -663,15 +666,15 @@ fier (name{table.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 \end{verbatim}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.6}) has been already used, duplicate ignored
+l.526 \end{verbatim}
+                    ] [7pdfTeX warning (ext4): destination with the same identi
+fier (name{table.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 \end{verbatim}
-                    ] [7pdfTeX warning (ext4): destination with the same identi
-fier (name{table.7}) has been already used, duplicate ignored
+l.526 \end{verbatim}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{table.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -700,16 +703,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1037.
 
 Package rerunfilecheck Info: File `Final-Report.out' has not changed.
 (rerunfilecheck)             Checksum: 8981966D5966D9DBC299617C3A3D41E4;2270.
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1037.
  ) 
 Here is how much of TeX's memory you used:
- 12177 strings out of 482854
- 172296 string characters out of 5956102
- 455681 words of memory out of 5000000
- 27209 multiletter control sequences out of 15000+600000
+ 12180 strings out of 482854
+ 172341 string characters out of 5956102
+ 455768 words of memory out of 5000000
+ 27212 multiletter control sequences out of 15000+600000
  568772 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,15n,45p,288b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -726,7 +726,7 @@ lmr7.pfb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.p
 fb></Users/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></U
 sers/diga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/di
 ga/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final-Report.pdf (19 pages, 641448 bytes).
+Output written on Final-Report.pdf (19 pages, 641612 bytes).
 PDF statistics:
  297 PDF objects out of 1000 (max. 8388607)
  261 compressed objects within 3 object streams
