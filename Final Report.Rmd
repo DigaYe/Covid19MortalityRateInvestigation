@@ -109,6 +109,7 @@ Observe the GVIF values. Using the value 5 as a cutoff, we see signs of multicol
 ## Automatic model selection method
 To start our model selection process, we used the stepwise selection method first. Starting with the full model of all 9 variables, we begin the stepwise algorithm to find the best model.
 ```{r}
+# Stepwise Automatic Model Selection Method
 step.model <- stepAIC(fullmodel, direction = "both",  trace = FALSE)
 summary(step.model)
 step.model$anova
@@ -122,6 +123,7 @@ In order to find the best fitting model, we performed another model selection pr
 
 
 ```{r, fig.pos="H"}
+# Form a Table of Details about Models Used
 f <- regsubsets(Mortality~., data=Covid19,nbest=2, nvmax=11)
 e <- summary(f)
 attach(e)
@@ -133,6 +135,7 @@ kable(explain1,align = "l",booktabs = T, caption = "Variable Reference")%>%
 
 
 ```{r CpValue}
+# All Possible Combinations by Automatic Model Selection Process
 combination <- cbind(which,cp,adjr2)
 kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP values",
       col.names = c("0", "1","2","3","4","5","6","7","8","9","10","11", "cp","adjr2"))%>%
@@ -144,6 +147,7 @@ kable(combination,align = "l",booktabs = T, caption = "Model Selection with CP v
 From the result, we noticed that models containing at least 4 variables have fair Cp values, whereas models contianing 3 variables or less have Cp values of at least 11, which is way above the acceptable range. In addition, the $R_{adj}^2$ value increases with the number of variables in the model. Hence, we only consider models of 4 variables and above, as listed below. 
 
 ```{r}
+# Suitable Models from Above Model Selection Process
 model1 <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region))
 model2 <- lm(Mortality~ElderlyRate + Nurse + Migration + factor(Region))
 model3 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region))
@@ -157,14 +161,18 @@ model10 <- lm(Mortality~ElderlyRate + Specialist + Nurse + Migration + Unemploym
 model11 <- lm(Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + factor(Region) + factor(population))
 model12 <- lm(Mortality~ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + factor(Region) + factor(population))
 
+# AIC Values for Above Models
 A <- AIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12, k=2)
 
+# BIC Values for Above Models
 B <- BIC(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10,model11,model12)
 
+# Prepare a Table for Available Models
 d2=data.frame(Model= c(1, 2, 3, 4, 5, 6,7, 8,9,10,11,12), Regression_Equation = c("Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region", "Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate +  Region","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population","Log of Mortality Rate vs. ElderlyRate + Specialist + Nurse + Migration + Unemployment_rate_2018 + Physician_rate + Poverty + Region + population"))
 ```
 
 ```{r, fig.pos="H"}
+# Generate Table including Available Models
 kable(d2,align = "cl",booktabs = T, caption = "Automatic Selection Model Summary")%>%
   kable_styling(position = "center", full_width = TRUE,latex_options = "HOLD_position")%>%
   column_spec(1, width = "5em")%>%
@@ -174,6 +182,7 @@ kable(d2,align = "cl",booktabs = T, caption = "Automatic Selection Model Summary
 
 
 ```{r AIC&BIC}
+# Generate Table including AIC & BIC values
 output_table <- data.frame(A, B[2]) 
 kable(output_table,align = "l",booktabs = T, caption = "AIC and BIC values")%>%
   kable_styling(position = "center", full_width = FALSE,latex_options = "HOLD_position")%>%
@@ -187,12 +196,14 @@ By comparing this result, we notice that model1, model2, model3, and model4 have
 Step 1: start by fitting Model3: Mortality~ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + factor(Region), and consider the partial t tests for each explanatory variable.
 
 ```{r}
+# Model 3: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Unemployment_rate_2018 + Region
 summary(model3)
 ```
 
 According to the result, the p-value for Unemployment_rate_2018 = 0.07634 > $\alpha = 0.05$ which means Unemployment_rate_2018 is not statistically significant. Then, we omit the variable Unemployment_rate_2018 from the model.
 
 ```{r}
+# Model 1: Log of Mortality Rate vs. ElderlyRate + Specialist + Migration + Region
 summary(model1)
 ```
 
@@ -203,7 +214,10 @@ Step 2: Repeat the procedure in step 1 with a simplified model excluding the Une
 Next, we use the extra sum of squares principle to compare to compare betwene model2 and model4 since they have a nested relationship. So, we performed a hypothesis test on the variable Unemployment_rate_2018.
 
 ```{r}
+# Model 2: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Region
 summary(model2)
+
+# Model 4: Log of Mortality Rate vs. ElderlyRate + Nurse + Migration + Unemployment_rate_2018 + Region
 summary(model4)
 ```
 
@@ -214,6 +228,7 @@ Hypothesis test:
 (2) $f_0 = \frac{(1.035 - 1.034)/(1724-1723)}{1.034/1723} = 1.66634$
 
 ```{r}
+# Calculating p-value for Unemployment_rate_2018
 (pval4 <- pf(1.66634,1, 1723, lower.tail = FALSE))
 ```
 
@@ -228,6 +243,7 @@ Thus, we choose model2 above model4.
 Then, we compare the results from model1 and model2. Notice that model1 and model2 have the same standard error, but model1 has a lower p-value and higher $R_{adj}^2$ compared to model2. Thus, we choose model1 to further investigate on. Moreover, we want to investigate on the collinearity between Specialist and Migration since they have a correlation coefficient of 0.855.
 
 ```{r model_int}
+# Model with Interaction term
 model_int <- lm(Mortality~ElderlyRate + Specialist + Migration + factor(Region) + Specialist * Migration)
 summary(model_int)
 anova(model_int)
