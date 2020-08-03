@@ -306,6 +306,7 @@ In conclusion, the selected model consists of 4 explanatory variables: ElderlyRa
 # Appendix{-}
 Below lists the 9 single-model summaries for the selected explanatory variables. 
 ```{r}
+# Single Model Fitting
 modela <- lm(Mortality~ ElderlyRate)
 modelb <- lm(Mortality~ Region)
 modelc <- lm(Mortality~ Specialist)
