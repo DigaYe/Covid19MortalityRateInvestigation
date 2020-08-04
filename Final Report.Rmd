@@ -68,7 +68,7 @@ Furthermore, we are interested in the mortality rate and have set it to be our r
 
 In the previous report, we have identified 6 individually significant explanatory variables, including Specialist, Physician_rate, ElderlyRate, Region, Population, Unemployment_rate_2018. Due to the low $R_{adj}^2$ value in those models, we searched in our dataset for additional explanatory variables that reasonably affect the COVID-19 mortality rate. Among the variables that are reasonable to be included, we selected 3 of them whose corresponding single-variable models were tested significantly at $\alpha =0.05$ level of significance. These additional variables are Poverty, Migration, and Nurse, making a total of 9 variables selected.
 
-The p-values of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-model summaries are included in the appendix. 
+The p-values of the global F-tests for the corresponding 9 single-model fittings are listed below. Full single-variable model summaries are included in the appendix. 
 
 ```{r, fig.pos="H"}
 # Summary of fitting individual model with its corresponding p-value
